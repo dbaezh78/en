@@ -1,35 +1,3 @@
-// ==========================================================================
-// MODULO: CARGA DINÁMICA DE DATOS SEGÚN IDIOMA
-// ==========================================================================
-(function cargarDatosPorIdioma() {
-    const lang = localStorage.getItem('pref-lang') || 'Español';
-    let sufijo = 'es'; // Por defecto Español
-
-    // Mapeo de idiomas a sufijos de archivo
-    const mapaIdiomas = {
-        'English': 'en',
-        'Italiano': 'it',
-        'Português': 'po',
-        'Latin': 'la',
-        'Français': 'fr',
-        'Chino': 'ch',
-        'Ruso': 'ru',
-        'Creol': 'cr'
-    };
-
-    if (mapaIdiomas[lang]) {
-        sufijo = mapaIdiomas[lang];
-    }
-
-    const scriptDatos = document.createElement('script');
-    // IMPORTANTE: Asegúrate de que la ruta sea la correcta en tu servidor
-    scriptDatos.src = `/src/data/canto_data_${sufijo}.js`;
-    
-    // Usamos defer para que no bloquee, pero se ejecute en orden
-    scriptDatos.defer = true; 
-    document.head.appendChild(scriptDatos);
-})();
-
 (function() {
     // 1. Inyectar los archivos CSS automáticamente (Corregido)
     const linkNav = document.createElement('link');

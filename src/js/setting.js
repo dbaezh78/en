@@ -35,7 +35,7 @@ const tabsConfig = [
                         const cantoId = urlParams.get('canto');
                         
                         // Si el idioma no tiene subdominio asignado, vuelve al principal
-                        let nuevaUrl = (mapaDominios[val] || mapaDominios['Español']) + '/src/index.html';
+                        let nuevaUrl = (mapaDominios[val] || mapaDominios['Español']) + '/';
                         if (cantoId) nuevaUrl += '?canto=' + cantoId;
 
                         window.location.href = nuevaUrl;
