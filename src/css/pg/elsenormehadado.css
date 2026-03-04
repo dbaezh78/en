@@ -1,0 +1,27 @@
+        @media (min-width: 384px) {.container {margin-left: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 8%;}}
+
+.r1::before {
+
+    @media (min-width: 384px) {
+        height: 56px;
+        margin-left: 265px;
+        margin-top: -11%;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 1.5rem;
+        height: 80px;
+        margin-left: 489px;
+        margin-top: -7%;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 1.3rem;
+        font-weight: bold;
+        height: 66px;
+        margin-left: 359px;
+        margin-top: -8%;
+    }
+}

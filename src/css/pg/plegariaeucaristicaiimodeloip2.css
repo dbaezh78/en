@@ -1,0 +1,73 @@
+        @media (min-width: 384px) {.container {margin-left: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 8%;}}
+        
+.r1::before, .r2::before {
+    @media (min-width: 384px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {
+        height: 155px;
+        margin-left: 73%;
+        margin-top: 0%;
+    }
+}
+    
+
+.sb194::before {
+    @media (min-width: 384px) {}
+    @media (min-width: 768px){}
+    @media (min-width: 992px) {
+        height: 37px;
+        margin-left: 56%;
+        margin-top: 0%;
+        font-size: large;
+    }
+}
+
+.nSpace {
+    @media (min-width: 384px){
+        height: 10px;
+
+    }
+    @media (min-width: 768px){
+        height: 18px;
+    }
+    @media (min-width: 992px){
+        height: 4px;
+
+    }
+}
+
+
+.linea-canto {
+    @media (min-width: 992px) {
+        min-height: 13px;
+    }
+}
+
+
+@media (min-width: 992px) {
+.sp1 {
+    font-size: small;
+    color: #2c3e505c !important;
+    margin-left: -46px
+    }
+}
+
+
+@media (min-width: 992px) {
+    .sp2 {
+        color: #2c3e505c !important;
+        font-size: small;
+        margin-left: -46px;
+        margin-top: -40px;
+    }
+}
+
+.red {
+    color: red !important;
+}
+
+.sdb {
+     padding-bottom: 0px;
+}

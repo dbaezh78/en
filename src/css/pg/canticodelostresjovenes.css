@@ -1,0 +1,82 @@
+        @media (min-width: 384px) {.container {margin-left: 0%;}.r1::before {height: 127px;margin-left: 240px;margin-top: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}.r1::before {height: 211px;margin-left: 456px;margin-top: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 12%;}.r1::before {height: 160px;margin-left: 335px;margin-top: 0%;}}
+
+
+.m11 {margin-left: 244px;bottom: 63px;}
+.m12 {margin-left: 244px;bottom: 75px;}
+
+
+
+.linea-canto {
+    min-height: 30px;
+}
+.linea-canto {
+    margin-bottom: -12px;
+    padding-top: 7px;
+}
+
+.a321, .a322, .a323, .a324, .bdcd, .bdga, .tc1
+{position: relative;min-height: 0px;}
+
+.bdcd::before {
+    font-size: 1.3em;
+    content: "BENDECID...";
+    position: absolute;
+    color: black;
+    width: max-content; /* Movido aquí */
+    font: icon;
+    align-content: center;
+ }
+
+ .bdga::before {
+    font-size: 1.3em;
+    content: "BENDIGA...";
+    position: absolute;
+    color: black;
+    width: max-content; /* Movido aquí */
+    font: icon;
+    align-content: center;
+ }
+
+ .tc1::before {
+    content: "C.";
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-size: 1.3em;
+    position: absolute;
+    width: max-content; /* Movido aquí */
+    font: icon;
+    align-content: center;
+ }
+
+  .ta1::before {
+    content: "A.";
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-size: 1.3em;
+    position: absolute;
+    width: max-content; /* Movido aquí */
+    font: icon;
+    align-content: center;
+ }
+
+
+@media (min-width: 384px) {
+    .bdcd::before {font-weight: bolder;font-size: 0.9em;margin-left: 220px;top: 13px;}
+    .bdga::before {font-weight: bolder;font-size: 0.9em;margin-left: 220px;top: 13px;}
+    .tc1::before {font-size: 0.9rem;font-weight: bolder;margin-top: -38px;left: -18px;color: #80808078;}
+    .ta1::before {font-size: 0.9rem;font-weight: bolder;margin-top: -38px;left: 200px;color: #80808078;}        
+}
+
+@media (min-width: 768px) {
+    .bdcd::before {font-weight: bolder;font-size: 1.6em;margin-left: 429px;top: 24px;}
+    .bdga::before {font-weight: bolder;font-size: 1.6em;margin-left: 429px;top: 24px;}
+    .tc1::before {font-size: 1.6rem;font-weight: bolder;margin-top: -77px;left: -40px;color: #80808078;}
+    .ta1::before {font-size: 1.6rem;font-weight: bolder;margin-top: -77px;left: 375px;color: #80808078;}
+}
+
+@media (min-width: 992px) {
+    .bdcd::before {font-weight: bolder;font-size: 1.3em;margin-left: 300px;top: 15px;}
+    .bdga::before {font-weight: bolder;font-size: 1.3em;margin-left: 300px;top: 15px;}
+    .tc1::before {font-size: 1.23rem;font-weight: bolder;margin-top: -53px;left: -34px;color: #80808078;}
+    .ta1::before {font-size: 1.23rem;font-weight: bolder;margin-top: -61px;left: 271px;color: #80808078;}
+}

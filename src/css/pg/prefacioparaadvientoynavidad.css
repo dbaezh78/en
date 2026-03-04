@@ -1,0 +1,15 @@
+﻿        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 45px;margin-left: 213px;margin-top: -15px;}
+            .r11::before {height: 70px;margin-left: 188px;margin-top: -42px;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 52px;margin-left: 373px;margin-top: -17px;}
+            .r11::before {height: 100px;margin-left: 341px;margin-top: -54px}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {height: 48px;margin-left: 285px;margin-top: -15px;}
+            .r11::before {height: 84px;margin-left: 250px;margin-top: -50px;}
+        }

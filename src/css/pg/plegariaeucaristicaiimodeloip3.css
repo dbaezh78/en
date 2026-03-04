@@ -1,0 +1,118 @@
+        @media (min-width: 384px) {.container {margin-left: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 8%;}}
+
+.r1::before, .r2::before {
+    @media (min-width: 384px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {
+        height: 155px;
+        margin-left: 73%;
+        margin-top: 0%;
+    }
+}
+    
+
+.sb194::before {
+    @media (min-width: 384px) {}
+    @media (min-width: 768px){}
+    @media (min-width: 992px) {
+        height: 37px;
+        margin-left: 56%;
+        margin-top: 0%;
+        font-size: large;
+    }
+}
+
+.nSpace {
+    @media (min-width: 384px){
+        height: 10px;
+
+    }
+    @media (min-width: 768px){
+        height: 18px;
+    }
+    @media (min-width: 992px){
+        height: 4px;
+
+    }
+}
+
+
+.linea-canto {
+    @media (min-width: 992px) {
+        min-height: 13px;
+    }
+}
+
+
+@media (min-width: 992px) {
+.sp1 {
+    font-size: small;
+    color: #2c3e505c !important;
+    margin-left: -46px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .sp2 {
+        color: #2c3e505c !important;
+        font-size: small;
+        margin-left: -46px;
+        margin-top: -40px;
+    }
+}
+
+.red {
+    color: red !important;
+}
+
+.sdb {
+     padding-bottom: 0px;
+}
+
+
+.sp3 {
+    font-size: small;
+    color: #2c3e505c !important;
+    margin-left: -46px;
+    padding-top: 0px;
+    }
+
+
+.n1 {
+    @media (min-width: 384px) {
+        margin-top: -36px;
+        margin-left: 111px;
+    }
+    @media (min-width: 768px) {
+        top: -22px;
+        margin-left: 208px;
+    }
+    @media (min-width: 992px) {
+        top: -9px;
+        margin-left: 155px;
+    }
+    
+
+}
+.n2 {
+        @media (min-width: 384px) {
+        margin-top: -36px;
+        margin-left: 290px;
+    }
+    @media (min-width: 768px) {
+        margin-top: -79px;
+        margin-left: 542px;
+    }
+    @media (min-width: 992px) {
+        margin-top: -55px;
+        margin-left: 406px;
+    }
+    
+}
+
+.space1941 {margin-bottom: 100px;}
+.space1942 {margin-bottom: 20px;}
+.space1943 {margin-bottom: 10px;}

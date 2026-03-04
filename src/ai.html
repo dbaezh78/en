@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Litúrgico</title>
+    <link rel="icon"       href="img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/ai.css">
+    <link rel="stylesheet" href="css/aisearch.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+</head>
+<body>
+
+    
+    <div class="container">
+        
+        
+        <div id="fecha-actual" class="info-header">
+            
+            <div class="flextime">
+                <span id="dia-semana"></span>,
+                <span id="fecha-completa"></span>
+                <div id="tiempo-actual"></div>
+            </div>
+
+            <div class="homeb">
+                <a class="home" href="/src/index.html?canto=aclamacionesalaoraciondelosfieles" title="Ir a Aclamaciones de la oración de los Fieles"><span class="material-symbols-outlined">west</span></a>
+                <a class="home" href="/" title="Volver al Menú"><span class="material-symbols-outlined">home</span></a>
+                <a class="home" href="/src/index.html?canto=aleluyapascual" title="Ir a Aclamaciones de la oración de los Fieles"><span class="material-symbols-outlined">arrow_forward</span></a>
+            </div>
+
+                <div class="buscador-cantos">
+                    <input type="search" id="DavidLoBusca" placeholder="Buscar..."  autocomplete="on" class="toolbar-item search-input" title="Para buscar una semana precione el  tiempo (o para Ordinario, más la semana, mas el ciclo ej: o27c)">
+                    <div id="resultadosBusqueda" class="resultados-busqueda"></div>
+            </div>
+        </div>
+
+        <a class="cristo" href="/src/index.html?canto=aleluyapascual">
+            <img class="cristo" src="/src/img/cristo.png" alt="Cristo Resucitado" oncontextmenu="return false;" ondragstart="return false";>
+        </a>
+
+        <br>
+        
+
+        <h1>Seleccione el Año o Ciclo Litúrgico</h1>
+        <div class="ciclo-botones">
+            <button id="btn-a" class="ciclo-btn">Ciclo A</button>
+            <button id="btn-b" class="ciclo-btn">Ciclo B</button>
+            <button id="btn-c" class="ciclo-btn">Ciclo C</button>
+        </div>
+        
+        <h2>Tiempos</h2>
+        <hr>
+        <div id="tiempos-container">
+        </div>
+
+        <h2>Semanas / Fiestas</h2>
+        <hr>
+        <div id="semanas-container">
+        </div>
+
+        </div>
+
+    <script src="js/tiempos.js"></script>
+    <script src="/src/js/ai.js"></script>
+    <script src="/src/data/find.js"></script>
+
+</body>
+</html>

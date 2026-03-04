@@ -1,0 +1,149 @@
+#btn-login {
+    /* Opcional: Estilo para que se vea como un botón elegante */
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: large;
+    text-align: right;
+    /*border-radius: 20px;*/
+    /*background: rgba(255, 255, 255, 0.8);*/
+    /*position: absolute;*/
+}
+
+#btn-login:hover {
+    transition: all 0.3s ease;
+    color: goldenrod !important;
+
+}
+
+
+.cGoogle {
+    /*position: fixed;*/
+    padding: 5px ;
+    text-align: end;
+}
+
+/* Creamos el círculo oculto */
+.cGoogle:hover {
+    color: goldenrod !important;
+}
+
+
+/*
+    @media(min-width: 384px){margin-top: 26%;}
+    @media(min-width: 768px){margin-top: 12%;}
+    @media(min-width: 992px){margin-top: 9%;}
+*/
+
+#btn-loginx:hover {
+    background: rgb(12, 107, 196);
+    transform: scale(1.05);
+    color: white;
+}
+
+
+#btn-login1 {
+    /* Opcional: Estilo para que se vea como un botón elegante */
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: absolute;
+    font-size: small;
+    
+    /* 
+    border: 1px solid goldenrod;
+    border-radius: 20px;
+    padding: 12px 12px;
+    background: rgba(255, 255, 255, 0.8);
+    */}
+
+    @media(min-width: 384px) {#btn-login1 
+        {margin-top: 40%;
+        padding: 6px;
+    }}
+    @media(min-width: 768px) {#btn-login1 
+        {
+            margin-top: -5px;
+            padding: 7px;
+        }}
+    @media(min-width: 992px) {#btn-login1 {margin-top: 0%;}}
+
+
+.btn_login {
+    /* Opcional: Estilo para que se vea como un botón elegante */
+    cursor: pointer;
+    font-weight: 600;
+    /*background: rgba(255, 255, 255, 0.8);*/
+    transition: all 0.3s ease;
+
+    @media(min-width: 384px){margin-top: 0%;}
+    @media(min-width: 768px){margin-top: 0%;}
+    @media(min-width: 992px){margin-top: 0%;}
+}
+
+
+
+/* 
+Descontinuado
+
+.top-row-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px;
+}
+
+
+*/
+
+/* RESET ABSOLUTO PARA EL BOTÓN DE GOOGLE */
+.google-btn-container {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    background-color: transparent !important;
+    cursor: pointer !important;
+    padding: 4px 8px !important;
+    border: none !important;
+    overflow: visible !important; /* Permite que el logo se vea siempre */
+    white-space: nowrap !important; /* Evita saltos de línea */
+    position: relative !important;
+    text-decoration: none !important;
+    vertical-align: middle !important;
+}
+
+.google-btn-container:hover {
+    color: goldenrod !important;
+    background-color: rgba(66, 133, 244, 0.05) !important;
+}
+
+.btn-text {
+    font-weight: 700 !important;
+    color: #333 !important;
+    margin-right: 8px !important; /* Espacio antes del logo */
+    display: inline-block !important;
+}
+
+.google-icon-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 22px !important;
+    height: 22px !important;
+    flex-shrink: 0 !important; /* Impide que el logo se aplaste o desaparezca */
+}
+
+.google-icon {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    display: block !important;
+}
+
+/* Eliminamos cualquier posicionamiento absoluto que pudiera venir de IDs */
+#btn-login {
+    position: static !important;
+    float: none !important;
+    margin: 0 !important;
+}

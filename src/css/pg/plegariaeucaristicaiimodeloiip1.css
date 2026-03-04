@@ -1,0 +1,28 @@
+﻿        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 61px;margin-left: 157px;margin-top: -1px;}
+            .r11::before {height: 69px;margin-left: 196px;margin-top: -39px;}
+            .ast::before {margin-top: -2px;margin-left: 136px;}
+            .ast1::before {margin-top: 2px;margin-left: 117px;}
+            .ast2::before {margin-top: 3px;margin-left: 228px;}
+            .ast3::before {margin-top: 3px;margin-left: 15px;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 96px;margin-left: 283px;margin-top: 0px;}
+            .r11::before {height: 93px;margin-left: 321px;margin-top: -53px;}
+            .ast::before {margin-top: 3px;margin-left: 248px;}
+            .ast1::before {margin-top: 9px;margin-left: 215px;}
+            .ast2::before {margin-top: 7px;margin-left: 74px;}
+            .ast3::before {margin-top: 7px;margin-left: 26px;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {height: 78px;margin-left: 217px;margin-top: 3px;}
+            .r11::before {height: 80px;margin-left: 256px;margin-top: -45px;}
+            .ast::before {margin-top: -3px;margin-left: 195px;}
+            .ast1::before {margin-top: 7px;margin-left: 163px;}
+            .ast2::before {margin-top: 3px;margin-left: 56px;}
+            .ast3::before {margin-top: 3px;margin-left: 19px;}
+            .ast4::before {margin-top: -3px;margin-left: 195px;}
+        }

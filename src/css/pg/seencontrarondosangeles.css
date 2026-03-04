@@ -1,0 +1,12 @@
+        @media (min-width: 384px) {
+                .container {margin-left: 0%;}
+                .ast::before {font-size: 1.1rem;margin-top: 3px;margin-left: 185px;}
+        }
+        @media (min-width: 768px) {
+                .container {margin-left: 0%;}
+                .ast::before {font-size: 1.1rem;margin-top: 12px;margin-left: 347px;}
+        }
+        @media (min-width: 992px) {
+                .container {margin-left: 0%;}
+                .ast::before {margin-top: 9px;margin-left: 257px;}
+        }

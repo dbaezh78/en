@@ -1,0 +1,25 @@
+        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 30px;margin-left: 139px;margin-top: 2px;}
+            .r2::before {height: 34px;margin-left: 268px;margin-top: -4px;}
+            .sub {margin-top: -36px;background-color: white;width: 289px;}
+        }
+        
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 30px;margin-left: 236px;margin-top: 9px;}
+            .r2::before {height: 50px;margin-left: 477px;margin-top: -4px;}
+            .sub {margin-top: -58px;background-color: white;width: 542px;}
+            }
+        @media (min-width: 992px) {
+            .container {margin-left: 8%;}
+            .r2::before {height: 34px;margin-left: 352px;margin-top: 0%;}
+            .sub {margin-top: -45px;background-color: white;width: 84%;}
+        }
+
+
+
+
+
+
+.ajustar { width: max-content;}

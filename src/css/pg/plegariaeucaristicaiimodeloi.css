@@ -1,0 +1,47 @@
+.sp1 {font-size: small;}
+.sp3 {font-size: small;color: #2c3e505c !important;margin-left: -46px;padding-top: 0px;}
+.sp4 {text-align: center;font-size: x-large;font-weight: bolder;color: #2c3e505c !important;}
+.sp5{padding-bottom: 2%;}
+.red {color: red !important;}
+.put {cursor: pointer;}
+.sdb {padding-bottom: 0px;}
+.space1941 {margin-bottom: 100px;}
+.space1942 {margin-bottom: 20px;}
+.space1943 {margin-bottom: 10px;}
+.center {text-align: center;}
+.atext {font-size: 0.9em;}
+.lx {font-size: 0.6em;}
+.Santo {font-size: small;}
+
+    @media (min-width: 384px) {
+        .container {margin-left: 0px;}
+        .r1::before {height: 143px;margin-left: 261px;margin-top: -13px;}
+        .r2::before {height: 65px;margin-left: 185px;margin-top: -40px;}
+        .r11::before {height: 61px;margin-left: 180px;margin-top: -37px;}
+        .sb194::before {}
+        .nSpace {height: 10px;}
+        .sp1 {margin-left: -46px;}
+        .n1 {margin-top: -36px;margin-left: 111px;}
+        .n2 {margin-top: -36px;margin-left: 290px;}
+    }
+    @media (min-width: 768px) {
+        .container {margin-left: 0px;}
+        .r1::before {height: 230px;margin-left: 457px;margin-top: -28px;}
+        .r11::before {height: 94px;margin-left: 333px;margin-top: -54px;}
+        .sb194::before {height: 37px;margin-left: 363px;font-size: xx-large;}
+        .n1 {top: -22px;margin-left: 208px;}
+        .n2 {margin-top: -79px;margin-left: 542px;}
+        
+    }
+    @media (min-width: 992px) {
+        .container {margin-left: 8%;}
+        .r1::before {height: 177px;margin-left: 375px;margin-top: -18px;}
+        .r11::before {font-size: 1.3rem;font-weight: bold;height: 74px;margin-left: 248px;margin-top: -40px;}
+        .sb194::before {height: 37px;margin-left: 35%;margin-top: 0%;font-size: large;}
+        .nSpace {height: 4px;}
+        .linea-canto {min-height: 13px;}
+        .sp1 {padding-top: 30px;color: #2c3e505c !important;margin-left: -46px}
+        .sp2 {color: #2c3e505c !important;font-size: small;margin-left: -46px;margin-top: -40px;}
+        .n1 {top: -9px;margin-left: 155px;}
+        .n2 {margin-top: -55px;margin-left: 406px;}
+    }

@@ -1,0 +1,34 @@
+    @media (min-width: 384px) {
+        .container {margin-left: 0%;}
+        .r1::before {
+            margin-top: -12%;
+            height: 142px;
+            margin-left: 332px;
+            border-left: 1px solid #c6c5c575;
+            writing-mode: vertical-lr;
+            text-align: center;}
+            
+        }
+    @media (min-width: 768px) {
+        .container {margin-left: 0%;}
+        .r1::before {
+            font-size: 1.5rem;
+            height: 217px;
+            margin-left: 620px;
+            margin-top: -10%;
+            border-left: 2px solid #c6c5c575;
+            writing-mode: unset;
+            }
+    }
+    @media (min-width: 992px) {
+        .container {margin-left: 3%;}
+        .r1::before {
+            font-size: 1.3rem;
+            font-weight: bold;
+            height: 160px;
+            margin-left: 491px;
+            margin-top: -5%;
+            border-left: 2px solid #c6c5c575;
+            writing-mode: unset;
+        }
+    }

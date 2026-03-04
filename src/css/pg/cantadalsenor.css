@@ -1,0 +1,39 @@
+        @media (min-width: 384px) {.container {margin-left: 0%;}.r1::before {height: 127px;margin-left: 240px;margin-top: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}.r1::before {height: 211px;margin-left: 456px;margin-top: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 0%;}.r1::before {height: 160px;margin-left: 335px;margin-top: 0%;}}
+
+
+.a321, .a322, .a323, .a324
+{position: relative;min-height: 0px;}
+
+.a321::before, .a322::before, .a323::before, .a324::before
+{
+    content: "*";
+    position: absolute;
+    align-content: center;
+    color: red;
+    width: max-content; /* Movido aquí */
+    font: icon;
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+@media (min-width: 384px) {
+    .a321::before {margin-left: 310px;}
+    .a322::before {margin-left: 180px;top: 16px;}
+    .a323::before {margin-left: 299px;top: 17px;}
+    .a324::before {margin-left: 211px;top: 17px;}
+}
+@media (min-width: 768px) {
+    .a321::before {margin-left: 588px;top: 29px;}
+    .a322::before {margin-left: 338px;top: 28px;}
+    .a323::before {margin-left: 565px;top: 28px;}
+    .a324::before {margin-left: 389px;top: 27px;}    
+}
+@media (min-width: 992px) {
+    .a321::before {margin-left: 445px;}
+    .a322::before {margin-left: 250px;top: 22px;}
+    .a323::before {margin-left: 424px;top: 22px;}
+    .a324::before {margin-left: 291px;top: 22px;}    
+}

@@ -1,0 +1,25 @@
+﻿        @media (min-width: 384px) {.container {margin-left: 0%;}.r1::before {height: 127px;margin-left: 240px;margin-top: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}.r1::before {height: 211px;margin-left: 456px;margin-top: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 0%;}.r1::before {height: 160px;margin-left: 335px;margin-top: 0%;}}
+    
+.a321::before {
+    @media (min-width: 384px){
+        margin-left: 295px;
+        margin-top: 4px;
+    }
+    @media (min-width: 768px){
+        margin-left: 543px;
+        margin-top: 15px;
+    }
+    @media (min-width: 992px){
+        margin-left: 410px;
+        margin-top: 8px;
+    }
+}
+
+    .canto-content-wrapper.single-column-mode #canto-left-container {
+        padding-left: 8%;
+        padding-right: 0%;
+    }
+
+

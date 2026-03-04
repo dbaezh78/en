@@ -1,0 +1,14 @@
+        @media (min-width: 384px) {
+                .container {margin-left: 0%;}
+                .r1::before {height: 67px;margin-left: 232px;margin-top: -13%;}
+                .niño::before {content: "N.";margin-left: 0px;font-size: 1em;margin-top: 0px;}}
+                .canto-content-wrapper.single-column-mode #canto-left-container {padding-left: 10%;}
+        @media (min-width: 768px) {
+                .container {margin-left: 0%;}
+                .r1::before {height: 102px;margin-left: 418px;margin-top: -10%;}
+                .niño::before {content: "Niño:";left: -68px;font-size: 1.4rem;top: 20px;}}
+                .canto-content-wrapper.single-column-mode #canto-left-container {padding-left: 10%;}
+        @media (min-width: 992px) {
+                .container {margin-left: 0%;}
+                .r1::before {height: 76px;margin-left: 300px;margin-top: -45px;font-size: larger;}
+                .niño::before {content: "Niño:";margin-left: 0px;font-size: 1.4rem;top: 12px;}}

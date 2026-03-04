@@ -1,0 +1,11 @@
+
+.canto-content-wrapper.single-column-mode #canto-left-container {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 0% !important;
+    box-sizing: border-box;
+}
+
+.linea-canto {
+    width: 99%;
+}

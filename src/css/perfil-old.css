@@ -1,0 +1,298 @@
+.material-symbols-outlined {
+    display: flex;
+    align-content: center;
+    font-size: 24px;
+    line-height: 1;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.material-symbols-outlined:hover {
+    color: var(--SangreDeCristo);
+    color: goldenrod;
+}
+
+.perfil-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            /* max-width: 500px;*/
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #bc0009;
+            font-size: 14px;
+        }
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .btn-save {
+            background-color: #bc0009;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .admin-lock {
+            background: #fff3f3;
+            border: 1px dashed red;
+            padding: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .cLogout {
+            background: none; 
+            border: 1px solid #ccc; 
+            color: gray; 
+            width: fit-content; 
+            margin-top: 20px; 
+            padding: 10px; 
+            border-radius: 8px; 
+            cursor: pointer;
+        }
+
+        .navigation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    font-size: 28px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.logout-btn {
+    color: #bc0009; /* Rojo sangre para la salida */
+}
+
+.logout-btn:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+    .letra {
+        font-size: x-large !important;
+    }
+
+
+
+    /* css de listado de cantos*/
+
+    .contenedor-tabla {
+    overflow-x: auto;
+    /*margin-top: 20px;*/
+}
+
+.tabla-gestion {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tabla-gestion th, .tabla-gestion td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla-gestion th {
+    background-color: #bc0009;
+    color: white;
+}
+
+.tu-dato {
+    font-weight: bold;
+    color: #4CAF50; /* Verde para identificar que son datos del cantor */
+}
+
+.fecha-uso {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+
+/*  Tabla del listado de los cantos*/
+
+.tabla-gestion {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+}
+.tabla-gestion th {
+    background: #bc0009;
+    color: white;
+    padding: 10px;
+}
+.tabla-gestion td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.tu-dato {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+
+
+/* ACTUALIZACION*/
+
+.perfil-section {
+            margin-bottom: 15px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .section-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: #fdfdfd;
+            user-select: none;
+            transition: background 0.3s;
+        }
+
+        .section-header:hover {
+            background: #f5f5f5;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            font-family: 'Neocat';
+            color: #bc0009;
+        }
+
+        .section-content {
+            padding: 15px;
+            border-top: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        /* Ajuste para que los contenedores antiguos no dupliquen sombras */
+        .perfil-container {
+            box-shadow: none !important;
+            margin: 0 !important;
+            padding: 10px !important;
+            max-width: 100% !important;
+            border: none !important;
+        }
+
+        .material-symbols-outlined.arrow {
+            transition: transform 0.3s;
+        }
+        
+        /* Clase para rotar la flecha cuando está cerrado */
+        .collapsed .arrow {
+            transform: rotate(-90deg);
+        }
+
+        .perfil-section {
+            margin-bottom: 20px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .section-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: #fdfdfd;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.3s;
+        }
+
+        .section-header:hover {
+            background: #f8f8f8;
+        }
+
+        .header-title-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-family: 'Neocat';
+            color: #bc0009;
+        }
+
+        .section-content {
+            padding: 20px;
+        }
+
+        /* Ajuste de contenedores internos */
+        .perfil-container {
+            box-shadow: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            max-width: 100% !important;
+            border: none !important;
+        }
+
+        .arrow-icon {
+            transition: transform 0.3s ease;
+            color: #bc0009;
+            display: inline-block;
+        }
+
+        .collapsed .arrow-icon {
+            transform: rotate(-90deg);
+        }
+
+        /* Espaciado para los iconos de navegación */
+        .nav-icons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+.tabla-gestion b {
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+    background: #fff5f5; /* Un fondo muy suave para resaltar tu cambio */
+    padding: 2px 5px;
+    border-radius: 4px;
+}

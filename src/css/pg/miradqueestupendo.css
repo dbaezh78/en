@@ -1,0 +1,13 @@
+﻿        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 205px;margin-left: 228px;margin-top: -10%;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 323px;margin-left: 441px;margin-top: -8%;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {font-size: 1.3rem;font-weight: bold;height: 262px;margin-left: 69%;margin-top: -9%;}
+        }
+

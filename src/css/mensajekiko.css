@@ -1,0 +1,94 @@
+/* Si necesitas cargar la fuente */
+@font-face {
+    font-family: 'Neocat-Regular_3.0';
+    src: url('/src/font/Neocat-Regular_3.0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo del enlace original */
+.dblink {
+    display: inline-table;
+    text-decoration: none;
+    margin-top: -5px;
+    /* padding: 11px 10px;
+    /* color: inherit; */
+    /*    
+    display: block;
+    text-decoration: none;
+    margin-top: -11px;
+    color: inherit;*/
+}
+
+.border {
+    border: 1px solid goldenrod;
+    padding: 5px;
+}
+
+.marquee-text {
+    font-family: 'Neocat-Regular_3.0';
+    font-size: x-large;
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    color: darkgoldenrod;
+    margin-bottom: 20px;
+
+    @media (min-width: 384px){width: 364px;}@media (min-width: 768px){width: 768px;}@media (min-width: 992px){width: 990px;}
+}
+
+    @media (min-width: 384px) {
+        @keyframes marquee {
+            0% { transform: translateX(120%); }
+            100% { transform: translateX(-400%); }
+        }
+    }
+
+    @media (min-width: 768px) {
+        @keyframes marquee {
+            0% { transform: translateX(110%); }
+            100% { transform: translateX(-197%); }
+        }
+    }
+
+    @media (min-width: 992px) {
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-333%); }
+        }
+    }
+
+    @media (min-width: 2048px) {
+        @keyframes marquee {
+            0% { transform: translateX(110%); }
+            100% { transform: translateX(-400%); }
+        }
+     }
+
+/* Estilo del modal que aparecerá */
+.modal-cantos {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-cantos {
+    background-color: #FFFFCC; /* Amarillo claro */
+    font-family: 'Neocat-Regular_3.0', sans-serif;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    font-size: x-large;
+}
+

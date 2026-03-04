@@ -1,0 +1,17 @@
+        @media (min-width: 384px) {
+                .container {margin-left: 0%;}
+                .r1::before {height: 127px;margin-left: 240px;margin-top: 0%;}
+                .tc1::before {margin-top: 25px;}
+        }
+        @media (min-width: 768px) {
+                .container {margin-left: 0%;}
+                .r1::before {height: 211px;margin-left: 456px;margin-top: 0%;}
+                .tc1::before {margin-top: 34px;}
+
+        }
+        @media (min-width: 992px) {
+                .container {margin-left: 8%;}
+                .r1::before {height: 160px;margin-left: 335px;margin-top: 0%;}
+                .alabadlo2::before {height: 40px;margin-left: 68.4%;margin-top: -10px;}
+                .alabadlo1::before {height: 40px;margin-left: 65%;margin-top: -10px;}
+        }

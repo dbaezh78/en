@@ -1,0 +1,107 @@
+﻿    .cristo {
+        position: fixed;
+        align-self: flex-start;
+        opacity: 0.4; /* Adjust the opacity value (0.0 - 1.0) */
+    }
+
+    body {place-self: anchor-center;}
+
+        @media (min-width: 384px) {
+            .cristo {width: 30%;top: 6%;}
+            .container {margin-left: 25px;}
+            .r1::before {height: 127px;margin-left: 240px;margin-top: 0%;}
+            .top-row-controls {width: 100%;}
+            .canto-content-wrapper.single-column-mode #canto-left-container {
+                padding-left: 0%;
+                padding-right: 0%;}
+            body {width: 384px;}
+            .hombres::before {content: "H.";}
+            .mujeres::before {content: "M.";}
+            .hombres::before, .mujeres::before {left: -15px;top: 15px;}
+            .b2::before {height: 60px;margin-left: 63%;margin-top: -9%;}
+            
+        }
+        
+        @media (min-width: 768px) {
+            .cristo {width: 16%;top: 4%;}
+            .container {margin-left: 0%;}
+            .r1::before {height: 211px;margin-left: 456px;margin-top: 0%;}
+            body {width: 800px;}
+            .hombres::before {content: "H.";}
+            .mujeres::before {content: "M.";}
+            .hombres::before, .mujeres::before {font-size: 1.5rem;left: -42px;top: 20px;}
+            .b2::before {height: 104px;margin-left: 61%;margin-top: -9%;}
+        }
+
+        @media (min-width: 992px) {
+            .cristo {width: 8em;top: 7%;}
+            .container {margin-left: -16%;}.r1::before {height: 160px;margin-left: 335px;margin-top: 0%;}
+            body {width: 992px;}
+            .hombres::before {content: "Hombres:";}
+            .mujeres::before {content: "Mujeres:";}
+            .hombres::before, .mujeres::before {font-size: 1.0rem;left: -80px;top: 20px;}
+            .b2::before {height: 72px;margin-left: 61%;margin-top: -9%;}
+            .canto-content-wrapper.single-column-mode #canto-left-container {
+                padding-left: 0%;
+                padding-right: 0%;
+                width: fit-content;
+                align-items: normal;
+            }
+            .top-row-controls {width: 954px;}
+        }
+            /*
+            .top-row-controls {padding: 0px 0px 0px 0px;width: 990px;}
+            .top-row-controls {padding: 0px 0px 0px 0px;width: 950px;}*/
+        
+
+
+/*
+        .container {
+    @media (min-width: 384px) {
+        padding: 0px 3px 20px 3px;
+        text-align: center;
+        width: 0%;
+        margin-left: 6%;
+    }
+
+    @media (min-width: 768px) {
+        width: max-content;
+        margin-left: 0%;
+    }
+
+    @media (min-width: 992px) {
+        margin-left: 0%;
+    }
+
+}
+
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+                @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 129px;margin-left: 238px;margin-top: -11%;}
+            .canto-content-wrapper.single-column-mode #canto-left-container {padding-left: 0%;padding-right: 0%;}
+            .mujeres::before {content: "M:";}.hombress::before {content: "H:";}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 109px;margin-left: 428px;margin-top: -9%;}
+            .mujeres::before {content: "M:";}.hombress::before {content: "H:";}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 1%;}
+            .r1::before {height: 95px;margin-left: 333px;margin-top: -7%;}
+            .hombres::before, .mujeres::before {font-size: 1.4rem;margin-left: -78px;margin-top: -7px;}
+        }
+

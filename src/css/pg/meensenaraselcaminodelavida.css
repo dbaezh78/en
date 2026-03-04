@@ -1,0 +1,17 @@
+﻿        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 95px;margin-left: 262px;margin-top: -13%;}
+            .melisma::before {margin-top: 0%;left: 105px;font-style: italic;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {font-size: 1.5rem;height: 148px;margin-left: 497px;margin-top: -10%;}
+            .melisma::before {font-size: 1.2rem;margin-top: 3px;left: 195px;font-style: italic;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {font-size: 1.3rem;font-weight: bold;height: 118px;margin-left: 379px;margin-top: -5%;}
+            .melisma::before {font-size: 1rem;margin-top: 0%;left: 146px;font-style: italic;}
+        }
+
+

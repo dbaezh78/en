@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Cantos - Resucitó</title>
+    <link rel="icon"       href="./img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/select.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="perfil-container">
+            <div class="header-seleccion">
+                <div class="title-group" style="display: flex; align-items: center; gap: 15px;">
+                    <a href="#" onclick="history.back(); return false;" class="material-symbols-outlined back-btn">arrow_back</a>
+                    <h1 style="margin: 0;">Gestión de Listas</h1>
+                </div>
+            </div>
+
+                        <div class="perfil-section collapsed" id="wrapper-nueva-lista">
+    <div class="section-header" onclick="window.toggleSection('content-nueva-lista', 'wrapper-nueva-lista')" style="cursor: pointer;">
+        <div class="header-title-group">
+            <span class="material-symbols-outlined arrow-icon">expand_more</span>
+            <h2 style="font-size: 1.2rem; margin: 0;">Nueva Lista</h2>
+        </div>
+    </div>
+
+    <div id="content-nueva-lista" class="section-content cfg-close">
+        <div class="form-group">
+            <label>Nombre de la lista</label>
+            <input type="text" id="nombreLista" placeholder="Ej. Cantos de Pascua...">
+        </div>
+
+        <div class="buscador-input-container">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input type="text" id="inputBuscadorCantos" placeholder="Buscar canto por palabras..." oninput="window.filtrarSeleccion()">
+            <span id="btnLimpiarCantos" class="material-symbols-outlined close-icon" onclick="window.limpiarBuscadorSeleccion()" style="display: none;">close</span>
+        </div>
+
+        <div id="contenedor-seleccion" class="lista-scroll">
+            <p class="status-msg">Cargando cantos...</p>
+        </div>
+
+        <div id="cola-seleccion" class="cola-visual"></div>
+
+        <div class="contador-footer">
+            <span id="contador-seleccion">0</span> cantos seleccionados
+        </div>
+
+        <button class="btn-accion" onclick="window.guardarListaFirebase()">
+            <span class="material-symbols-outlined">cloud_upload</span>
+            Guardar en Nube
+        </button>
+    </div>
+</div>
+
+<div class="perfil-section" id="wrapper-mis-listas" style="margin-top: 20px;">
+    <div class="section-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="header-title-group" onclick="window.toggleSection('content-mis-listas', 'wrapper-mis-listas')" style="cursor: pointer; display: flex; align-items: center; flex-grow: 1;">
+            <span class="material-symbols-outlined arrow-icon">expand_more</span>
+            <h2 style="font-size: 1.2rem; margin: 0;">Mis Listados</h2>
+        </div>
+
+        <div class="header-actions">
+            <label for="input-importar" class="btn-circular-import" title="Importar Lista (.resucito)">
+                <span class="material-symbols-outlined">file_upload</span>
+            </label>
+            <input type="file" id="input-importar" accept=".resucito" onchange="window.importarLista(event)" style="display: none;">
+        </div>
+    </div>
+
+    <div id="content-mis-listas" class="section-content">
+
+        <div class="buscador-input-container">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input type="text" id="inputBuscadorListas" placeholder="Filtrar mis listas..." oninput="window.filtrarMisListas()">
+            <span id="btnLimpiarListas" class="material-symbols-outlined close-icon" onclick="window.limpiarBuscadorListas()" style="display: none;">close</span>
+        </div>
+                
+        <div id="lista-colecciones" class="listas-guardadas-container"></div>
+    </div>
+</div>
+
+
+</div>
+
+    <div id="modalVisorCanto" class="modal-fullscreen cfg-close">
+        <div id="contenidoCantoVisor" class="modal-body-visor"></div>
+    </div>
+
+    <script type="module" src="js/select.js"></script>
+    <script type="module" src="js/moduleGoogle.js"></script>
+    <script src="js/navigator.js"></script>
+    <script src="js/setting.js"></script>
+
+    <script type="module" src="js/logout.js"></script>
+    
+</body>
+</html>

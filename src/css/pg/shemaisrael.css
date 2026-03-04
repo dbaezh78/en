@@ -1,0 +1,25 @@
+﻿        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 129px;margin-left: 238px;margin-top: -11%;}
+            .melisma::before {font-size: small;margin-top: 0px;left: 100px;}
+            .sub {margin-top: -36px;margin-left: 114px;}
+            .sub1 {margin-top: -36px;margin-left: 130px;}
+            .ast::before {margin-top: 2px;margin-left: 119px;font-size: medium;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 216px;margin-left: 446px;margin-top: -9%;}
+            .ast::before {margin-top: 9px;margin-left: 221px;font-size: large;}
+            .melisma::before {font-size: medium;margin-top: 1px;margin-left: 86px;}
+            .sub {margin-top: -58px;margin-left: 210px;}
+            .sub1 {margin-top: -58px;margin-left: 240px;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 8%;}
+            .r1::before {height: 173px;margin-left: 337px;margin-top: -6%;}
+            .melisma::before {font-size: medium;margin-top: -4px;margin-left: 45px;}
+            .sub {margin-top: -46px;margin-left: 158px;}
+            .sub1 {margin-top: -46px;margin-left: 178px;}
+            .ast::before {margin-top: 6px;margin-left: 167px;}
+        }
+

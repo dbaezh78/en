@@ -1,0 +1,23 @@
+﻿        .melisma::before, .melisma1::before  {
+            font-style: italic;
+            color: red;
+        }
+
+        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 133px;margin-left: 186px;margin-top: -14%;}
+            .melisma::before {font-size: 0.8rem;margin-top: 0%;left: 217px;}
+            .melisma1::before {font-size: 0.9rem;left: 155px;top: 14px;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 219px;margin-left: 328px;margin-top: -12%;}
+            .melisma::before {font-size: 1.3rem;margin-top: 0%;left: 415px;}
+            .melisma1::before {font-size: 1.3rem;left: 286px;top: 20px;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {height: 173px;margin-left: 254px;margin-top: -6%;}
+            .melisma::before {font-size: 1rem;margin-top: -1%;left: 305px;}
+            .melisma1::before {font-size: 1rem;margin-top: -1%;left: 215px;}
+        }

@@ -1,0 +1,60 @@
+﻿        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 25px;margin-left: 109px;margin-top: 0px;}
+            .ast::before {margin-top: -2px;margin-left: 136px;}
+            .ast1::before {margin-top: 2px;margin-left: 117px;}
+            .ast2::before {margin-top: 3px;margin-left: 228px;}
+            .ast3::before {margin-top: 3px;margin-left: 15px;}
+            .ast4::before {margin-top: -3px;margin-left: 195px;}
+            .tx {margin-top: -26px; font-size: small;}
+            .adl1 {margin-left: 112px;}
+            .adl2 {margin-left: 152px;}
+            .izq {margin-left: -33px;font-size: 10px;}
+            .top1 {top:1px}
+            .f15 .letra{font-size: 8px;}
+            .width{width:max-content}
+            .canto-content-wrapper {gap: 50px;}
+            .cruz {margin-left: 90px;}
+            .sangre {margin-left: 120px;}
+            .r11::before{height: 66px;margin-left: 175px;margin-top: -38px;}
+            .ttgray {margin-left: -17px;}
+        }
+
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 39px;margin-left: 201px;margin-top: 0px;}
+            .ast::before {margin-top: 3px;margin-left: 248px;}
+            .ast1::before {margin-top: 9px;margin-left: 215px;}
+            .ast2::before {margin-top: 7px;margin-left: 74px;}
+            .ast3::before {margin-top: 7px;margin-left: 26px;}
+            .ast4::before {margin-top: -3px;margin-left: 195px;}
+            .tx {margin-top: -26px; font-size: small;}
+            .adl1 {margin-left: 203px;}
+            .adl2 {margin-left: 279px;}
+            .cruz {margin-left: 120px;}
+            .sangre {margin-left: 155px;}
+            .izq {margin-left: -33px;font-size: larger;}
+            .top1 {top:1px}
+            .f15 .letra{font-size: 8px;}
+            .r11::before{height: 115px;margin-left: 339px;margin-top: -67px;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {height: 25px;margin-left: 155px;margin-top: 3px;}
+            .ast::before {margin-top: -3px;margin-left: 195px;}
+            .ast1::before {margin-top: 7px;margin-left: 163px;}
+            .ast2::before {margin-top: 3px;margin-left: 56px;}
+            .ast3::before {margin-top: 3px;margin-left: 19px;}
+            .ast4::before {margin-top: -3px;margin-left: 195px;}
+            .tx {margin-top: -26px; font-size: small;}
+            .adl1 {margin-left: 157px;}
+            .adl2 {margin-left: 210px;}
+            .izq {margin-left: -33px;font-size: 10px;}
+            .top1 {top:1px}
+            .f15 .letra{font-size: 8px;}
+            .width{width:max-content}
+            .canto-content-wrapper {gap: 50px;}
+            .cruz {margin-left: 90px;}
+            .sangre {margin-left: 120px;}
+            .r11::before{height: 115px;margin-left: 339px;margin-top: -67px;}
+        }

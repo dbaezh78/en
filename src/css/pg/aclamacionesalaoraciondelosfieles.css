@@ -1,0 +1,34 @@
+        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 129px;margin-left: 238px;margin-top: -11%;}
+            .cl {text-align: center;margin-top: -170px;font-size: 2rem; padding-bottom: 64px; }
+            .cantosliturgicos::before {
+                margin-top: -154px;
+                font-size: xx-large;
+                width: 100%;}
+                .dbt1 {margin-top: 90px;}
+            }
+            @media (min-width: 768px) {
+                .container {margin-left: 0%;}
+            .r1::before {height: 216px;margin-left: 446px;margin-top: -9%;}
+            .cl {margin-left: 12px;margin-top: -163px;font-size: 1.6rem; }
+            .cantosliturgicos::before {
+                font-size: xxx-large;
+                margin-top: -143px;
+                width: 100%;}
+            .dbt1 {margin-top: 90px;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {height: 173px;margin-left: 337px;margin-top: -6%;}
+            .left {margin-left: -36px;}
+            .mmmi {margin-top: -20px;}
+            .cl {margin-left: 140px;margin-top: -159px;font-size: 2rem; }
+            .cantosliturgicos::before {
+                margin-top: -140px;
+                width: 84%;}
+        .dbt1 {margin-top: 80px;}
+            }
+
+
+

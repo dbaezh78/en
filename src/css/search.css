@@ -1,0 +1,114 @@
+/* search.css - Estilos específicos para el buscador */
+
+/* Contenedor principal del buscador */
+.buscador-cantos {
+    position: relative; /* Necesario para posicionar los resultados */
+    display: inline-block; /* Para que ocupe solo el espacio necesario */
+}
+
+/* Estilos para el campo de búsqueda */
+.search-input {
+    padding: 5px 7px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    width: 150px; /* Ancho por defecto */
+    transition: width 0.5s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: goldenrod;
+    box-shadow: 0 0 0 2px rgba(90, 45, 128, 0.2);
+    width: 200px; /* Expandir al enfocar */
+}
+
+/* Media queries para el campo de búsqueda */
+@media(min-width: 384px){
+    .search-input {
+        width: 60px;
+    }
+
+    .search-input:focus {
+        width: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .search-input {
+        width: 80px;
+    }
+    .search-input:focus {
+        width: 200px;
+    }
+}
+@media (min-width: 992px) {
+    .search-input {
+        width: 100px;
+    }
+    .search-input:focus {
+        width: 200px;
+    }
+}
+
+/* Contenedor de resultados de búsqueda */
+.resultados-busqueda {
+    position: absolute;
+    background-color: #421616;
+    color: white;
+    border: 1px solid #ddd;
+    max-height: 200px; /* Limita la altura y permite scroll */
+    overflow-y: auto;
+    width: calc(100% - 2px); /* Ocupa el ancho del input, ajustando por el borde */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Oculto por defecto, se muestra con JS */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 5px;
+    left: 0; /* Alinea con el borde izquierdo del input */
+    right: 0; /* Alinea con el borde derecho del input */
+
+    @media (min-width: 384px) {
+        max-height: 280px;
+        width: calc(186px - 2px);
+        left: auto
+
+    }
+    @media (min-width: 768px) {
+        max-height: 300px;
+        width: calc(100% - 2px);
+        left: 0;
+        right: 0;
+    }
+    @media (min-width: 992px) {
+        max-height: 300px;
+        width: calc(300px - 2px);
+        left: auto;
+    }
+}
+
+.resultados-busqueda .resultado-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    color: #ffffff; /* Color de texto legible */
+    text-align: left; /* Alinea el texto a la izquierda */
+    z-index: 9999;
+
+    @media (min-width: 384px) {
+        padding: 5px;
+    }
+}
+
+.resultados-busqueda .resultado-item:last-child {
+    border-bottom: none;
+    z-index: 9999;
+}
+
+.resultados-busqueda .resultado-item:hover {
+    background-color: white;
+    color: #421616;
+    z-index: 9999
+}

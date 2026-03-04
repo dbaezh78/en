@@ -1,0 +1,25 @@
+        @media (min-width: 384px) {.container {margin-left: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 8%;}}
+
+.melisma::before {
+    color: red;
+    font-style: italic;
+    @media (min-width: 384px) {
+        font-size: 0.9rem;
+        left: 236px;
+        top: 14px;
+    }
+    @media (min-width: 768px) {
+        font-size: 1.2rem;
+        left: 441px;
+        top: 22px;
+    }
+    @media (min-width: 992px) {
+        font-size: 1rem;
+        margin-top: -1%;
+        left: 331px;
+    }
+}
+
+

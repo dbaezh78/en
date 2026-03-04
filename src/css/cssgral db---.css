@@ -1,0 +1,121 @@
+/* Creado por un siervo de Cristo: Carlos David */
+
+#CristoReydereyesYSeñordeseñores {
+    --CristoMiSeñor: white
+}
+
+
+/* CSS PARA LIBRO DE CANTOS*/
+      @font-face {font-family: 'Libre Franklin';src: url('../font/LibreFranklin-Bold.ttf') format('truetype');font-weight: 700; /* Bold */font-style: normal;font-display: swap; /* Mejor experiencia de carga */}
+      @font-face {font-family: 'Material Symbols Outlined Local';font-style: normal;font-weight: 100 700;src: url('../font/font.woff2') format('woff2'); /* Ajusta la ruta según tu estructura */}
+      @font-face {font-family: 'Fave';src: local('Fave Script Bold Pro'), local('Fave-Script-Bold-Pro'),url('../font/Fave-ScriptBoldPro.woff2') format('woff2'),url('../font/Fave-ScriptBoldPro.woff') format('woff'),url('../font/Fave-ScriptBoldPro.ttf') format('truetype');font-weight: 700;font-style: normal;}
+      @font-face {font-family: 'Franklin Gothic Medium';src: url('../font/FranklinGothicMedium.ttf') format('truetype');font-weight: normal;font-style: normal;font-display: swap;}
+      @font-face {font-family: Neocat; src: url('../font/Neocat-Regular_3.0.ttf') format('truetype'); font-display: swap; }
+
+
+
+:root {
+    /* --- 1. COLORES DE IDENTIDAD --- */
+    --SangreDeCristo: #780606;
+    --accent: #bc0009;
+    --vblancas: #ffffff;
+
+    /* --- 2. COLORES DE INTERFAZ (MODO CLARO) --- */
+    --bg-principal: #ffffff;
+    --bg-contenedores: #f5f5f7;
+    --bg-header: #bc0009;
+    
+    --texto-principal: #1d1d1f;
+    --texto-secundario: #666666;
+    --texto-blanco: #ffffff;
+    --borde-divisor: #e5e5e5;
+
+    /* --- 3. FONDOS DE CATEGORÍA (MODO CLARO) --- */
+    --precat: #ffffff;
+    --liturgia: #FFFFCB;
+    --cat: #bde9ff;
+    --eleccion: #CEFFCF;
+
+    /* Fondos específicos para la página del Canto */
+    --FondoCanto-Precatecumenado: #ffffff;
+    --FondoCanto-Catecumenado: #bde9ff;
+    --FondoCanto-Liturgico: #FFFFCB;
+    --FondoCanto-Eleccion: #CEFFCF;
+
+    /* Trasfondos (20% opacidad) */
+    --Trasfondo-Precat: rgba(255, 255, 255, 0.2);
+    --Trasfondo-Liturgia: rgba(255, 255, 203, 0.2);
+    --Trasfondo-Cat: rgba(189, 233, 255, 0.2);
+    --Trasfondo-Eleccion: rgba(206, 255, 207, 0.2);
+
+    /* --- 4. COLORES DE ACORDES (SISTEMA ARCOIRIS) --- */
+    --chord-color-do: #FF0000;
+    --chord-color-re: #FFA500;
+    --chord-color-mi: #FFFF00;
+    --chord-color-fa: #138c13;
+    --chord-color-sol: #1e7ec2;
+    --chord-color-la: #800080;
+    --chord-color-si: #000000;
+    --chord-color-default-text: #ffffff;
+}
+
+/* ==========================================================================
+   MODO OSCURO: AQUÍ ES DONDE SUCEDE LA MAGIA
+   ========================================================================== */
+body.dark-theme {
+    /* Interfaz */
+    --bg-principal: #121212;
+    --bg-contenedores: #2c2c2e; /* El color que pediste */
+    --bg-header: #000000;
+    
+    --texto-principal: #f5f5f7;
+    --texto-secundario: #a1a1a6;
+    --borde-divisor: #3a3a3c;
+    --accent: #ff453a;
+
+    /* Sobreescribimos los fondos de categoría para que no deslumbren */
+    /* En modo oscuro, todos los cantos usarán el fondo gris oscuro */
+    --precat: #2c2c2e;
+    --liturgia: #2c2c2e;
+    --cat: #2c2c2e;
+    --eleccion: #2c2c2e;
+
+    --FondoCanto-Precatecumenado: #2c2c2e;
+    --FondoCanto-Catecumenado: #2c2c2e;
+    --FondoCanto-Liturgico: #2c2c2e;
+    --FondoCanto-Eleccion: #2c2c2e;
+
+    /* Trasfondos oscuros sutiles */
+    --Trasfondo-Precat: rgba(255, 255, 255, 0.05);
+    --Trasfondo-Liturgia: rgba(255, 255, 203, 0.05);
+    --Trasfondo-Cat: rgba(189, 233, 255, 0.05);
+    --Trasfondo-Eleccion: rgba(206, 255, 207, 0.05);
+}
+
+body {
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    
+    /* Variables dinámicas */
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    
+    /* Transición suave para que el cambio no sea brusco */
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    /* Control de Usuario */
+    user-select: none; 
+    -webkit-user-select: none;
+}
+
+/* Ejemplo de aplicación en el contenedor que mencionaste */
+.main-wrapper, .container, .category-link {
+    background-color: var(--bg-contenedores);
+    transition: background-color 0.3s ease;
+}

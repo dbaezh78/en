@@ -1,0 +1,23 @@
+        @media (min-width: 384px) {.container {margin-left: 0%;}.r1::before {height: 127px;margin-left: 240px;margin-top: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}.r1::before {height: 211px;margin-left: 456px;margin-top: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 12%;}.r1::before {height: 160px;margin-left: 335px;margin-top: 0%;}}
+
+.linea-canto {
+    @media (min-width: 384px) {min-height: 5px;padding-top: 8px;}
+    @media (min-width: 768px) {min-height: 9px;padding-top: 12px;}
+    @media (min-width: 992px) {min-height: 9px;padding-top: 12px;}
+}
+
+.nSpace {
+    @media (min-width: 384px){
+        height: 10px;
+
+    }
+    @media (min-width: 768px){
+        height: 18px;
+    }
+    @media (min-width: 992px){
+        height: 10px;
+
+    }
+}

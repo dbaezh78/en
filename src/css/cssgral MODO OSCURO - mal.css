@@ -1,0 +1,1195 @@
+/* Creado por un siervo de Cristo: Carlos David */
+
+#CristoReydereyesYSeñordeseñores {
+    --CristoMiSeñor: white
+}
+
+/* ==========================================================================
+   1. FUENTES (FONT FACES)
+   ========================================================================== */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../font/LibreFranklin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Material Symbols Outlined Local';
+    font-style: normal;
+    font-weight: 100 700;
+    src: url('../font/font.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Fave';
+    src: local('Fave Script Bold Pro'), local('Fave-Script-Bold-Pro'),
+         url('../font/Fave-ScriptBoldPro.woff2') format('woff2'),
+         url('../font/Fave-ScriptBoldPro.woff') format('woff'),
+         url('../font/Fave-ScriptBoldPro.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Franklin Gothic Medium';
+    src: url('../font/FranklinGothicMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Neocat; 
+    src: url('../font/Neocat-Regular_3.0.ttf') format('truetype'); 
+    font-display: swap; 
+}
+
+/* ==========================================================================
+   2. VARIABLES MAESTRAS (PATRÓN MODULAR)
+   ========================================================================== */
+:root {
+    /* Identidad */
+    --SangreDeCristo: #780606;
+    --vblancas: white;
+    --accent: #bc0009;
+
+    /* MODO CLARO (Tus colores originales) */
+    --bg-principal: #ffffff;      /* Fondo de los contenedores .container y .main-wrapper */
+    --bg-body-fallback: #f4f4f4;  /* Fondo exterior */
+    --bg-header: #bc0009;
+    
+    --texto-principal: #333333;   /* Tu color de texto original */
+    --texto-secundario: #666666;
+    --texto-blanco: #ffffff;
+    --borde-divisor: #e5e5e5;
+
+    /* Colores de Categoría (Originales) */
+    --precat: white;
+    --liturgia: #FFFFCB;
+    --cat: #bde9ff;
+    --eleccion: #CEFFCF;
+
+    /* Trasfondos con 20% de transparencia (Originales) */
+    --precat-body-bg: rgba(255, 255, 255, 0.2);
+    --liturgia-body-bg: rgba(255, 255, 203, 0.2);
+    --cat-body-bg: rgba(189, 233, 255, 0.2);
+    --eleccion-body-bg: rgba(206, 255, 207, 0.2);
+
+    /* Colores de Acordes (Sistema Arcoiris) */
+    --chord-color-do: #FF0000;
+    --chord-color-re: #FFA500;
+    --chord-color-mi: #FFFF00;
+    --chord-color-fa: #138c13;
+    --chord-color-fas: #138c13;
+    --chord-color-sol: #1e7ec2;
+    --chord-color-la: #800080;
+    --chord-color-si: #000000;
+    --chord-color-default-text: white;
+}
+
+/* ==========================================================================
+   3. MODO OSCURO (Transformación Correcta)
+   ========================================================================== */
+body.dark-theme {
+    /* Interfaz Oscura Protegida */
+    --bg-principal: #121212;      /* Fondo exterior casi negro */
+    --bg-contenedores: #2c2c2e;   /* Tu color gris oscuro para los cuadros */
+    --bg-header: #000000;
+    
+    --texto-principal: #f5f5f7;   /* Blanco suave para no deslumbrar */
+    --texto-secundario: #a1a1a6;
+    --borde-divisor: #3a3a3c;
+    --accent: #ff453a;
+
+    /* En modo oscuro, los colores de categoría se unifican al gris oscuro */
+    --precat: var(--bg-contenedores);
+    --liturgia: var(--bg-contenedores);
+    --cat: var(--bg-contenedores);
+    --eleccion: var(--bg-contenedores);
+
+    /* Trasfondos oscuros mínimos */
+    --precat-body-bg: #121212;
+    --liturgia-body-bg: #121212;
+    --cat-body-bg: #121212;
+    --eleccion-body-bg: #121212;
+}
+
+/* ==========================================================================
+   4. ESTILOS BASE DEL BODY
+   ========================================================================== */
+body {
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 20px;
+
+    /* Aplicación de Variables */
+    background-color: var(--bg-body-fallback);
+    color: var(--texto-principal);
+    
+    /* Transición suave para el cambio de tema */
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    /* Control de Usuario */
+    user-select: none; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ajustes Responsivos para el Body */
+@media(min-width: 344px) { body { padding: 0px; } }
+@media(min-width: 384px) { body { padding: 0px; } }
+@media(min-width: 768px) { body { padding: 0px; } }
+
+/* ==========================================================================
+   5. CONTENEDORES (CONTAINER & WRAPPER)
+   ========================================================================== */
+.container {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    padding: 66px;
+    border-radius: 1px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Media Queries para .container */
+@media(min-width: 344px) {
+    .container { padding: 0px 3px 20px 3px; width: 98%; text-align: center; }
+}
+@media(min-width: 384px) {
+    .container { padding: 0px 3px 20px 3px; width: 98%; text-align: center; }
+}
+@media(min-width: 768px) {
+    .container { padding: 0px 1px 20px 0px; width: 98%; text-align: center; }
+}
+@media(min-width: 992px) {
+    .container { padding: 0px 3px 50px 3px; width: 98%; text-align: center; }
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
+    /* Dinámico: usa color original o el gris oscuro de modo oscuro */
+    background-color: var(--bg-principal);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Aplicación de colores por categoría (Heredan de variables) */
+body.precat .main-wrapper   { background-color: var(--precat); }
+body.cat .main-wrapper      { background-color: var(--cat); }
+body.liturgia .main-wrapper { background-color: var(--liturgia); }
+body.eleccion .main-wrapper { background-color: var(--eleccion); }
+
+/* Ajuste de sombras para el modo oscuro */
+body.dark-theme .main-wrapper {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--borde-divisor);
+}
+
+/* ==========================================================================
+   6. CABECERA Y CONTROLES SUPERIORES (TOP ROW)
+   ========================================================================== */
+
+.header-section {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 1px;
+}
+
+.top-row-controls {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    
+    /* Dinámico: --SangreDeCristo en claro, --bg-header (#000) en oscuro */
+    background-color: var(--bg-header);
+    
+    position: fixed; /* Fixed for mobile/tablet */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+
+    @media (min-width: 768px) {
+        font-size: larger;
+    }
+}
+
+/* Ajuste para Desktop */
+@media (min-width: 992px) {
+    .top-row-controls {
+        position: fixed;
+        justify-content: space-between;
+        padding: 0px 40px 0px 0px;
+        left: auto;
+        width: 1080px;
+        justify-self: anchor-center;
+    }
+}
+
+.home-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+/* BOTONES DE ICONO */
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+    /* El color base del icono suele ser blanco en tu diseño */
+    color: var(--texto-blanco);
+    
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.icon-button:hover {
+    /* Al pasar el mouse, el fondo se vuelve blanco */
+    background-color: white;
+}
+
+/* ICONOS MATERIAL (MATERIAL SYMBOLS) */
+.material-symbols-outlined {
+    display: flex;
+    align-content: center;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--texto-blanco);
+    text-align: center;
+    transition: color 0.2s ease;
+}
+
+/* EFECTOS HOVER (MODULAR) */
+/* En modo claro el hover es Sangre de Cristo, en oscuro se mantiene el acento */
+.icon-button:hover .material-symbols-outlined,
+.material-symbols-outlined:hover,
+.mso:hover {
+    color: var(--SangreDeCristo);
+}
+
+/* AJUSTE ESPECÍFICO PARA MODO OSCURO EN ICONOS */
+body.dark-theme .icon-button:hover .material-symbols-outlined,
+body.dark-theme .material-symbols-outlined:hover {
+    color: var(--accent); /* Usa el rojo brillante en fondo oscuro */
+}
+
+
+
+
+
+/* ==========================================================================
+   7. TOOLBAR (BARRA DE HERRAMIENTAS / FILTROS)
+   ========================================================================== */
+.toolbar {
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.mgap {
+    @media (min-width: 284px) and (max-width: 484px) {
+        gap: 0%;
+        #toggleVista { display: none; }
+    }
+    @media (min-width: 485px) and (max-width: 991px) {
+        gap: 35px;
+        #toggleVista { display: none; }
+    }
+    @media (min-width: 992px) {
+        gap: 35px;
+    }
+}
+
+.toolbar-item {
+    vertical-align: middle;
+}
+
+/* INPUTS Y SELECTS DINÁMICOS */
+.toolbar select,
+.toolbar .search-input {
+    padding: 5px 7px;
+    border-radius: 20px;
+    border: 1px solid var(--borde-divisor);
+    font-size: 14.4px;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    
+    /* Dinámico: #f9f9f9 en claro, #2c2c2e en oscuro */
+    background-color: var(--bg-contenedores);
+    color: var(--texto-principal);
+    
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 384px) {
+    .toolbar select, .toolbar .search-input {
+        padding: 5px 0px;
+    }
+}
+
+.toolbar select:focus,
+.toolbar .search-input:focus {
+    outline: none;
+    border-color: goldenrod;
+    box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.2);
+}
+
+.cejilla {
+    font-size: 19.2px !important;
+    color: var(--texto-principal);
+}
+
+/* LÓGICA DEL BUSCADOR */
+.search-input {
+    width: 150px;
+    transition: width 0.5s ease;
+    margin-left: -1%;
+}
+
+@media (min-width: 384px) { .search-input { width: 60px; } }
+@media (min-width: 768px) { .search-input { width: 80px; } }
+@media (min-width: 992px) { .search-input { width: 100px; } }
+
+/* Expansión del buscador al enfocar */
+@media (min-width: 384px) { .search-input:focus { width: 100px; } }
+@media (min-width: 768px) { .search-input:focus { width: 150px; } }
+@media (min-width: 992px) { .search-input:focus { width: 200px; } }
+
+/* ==========================================================================
+   8. TÍTULOS Y SUBTÍTULOS (ESTILO SALMISTA)
+   ========================================================================== */
+.may { text-transform: uppercase; }
+
+/* Título Principal (Canto) */
+.dbt1 {
+    text-transform: uppercase;
+    text-align: center;
+    
+    /* En claro usa tu rojo, en oscuro usa el acento vibrante */
+    color: var(--accent); 
+    
+    margin-top: 60px;
+    transition: color 0.3s ease;
+}
+
+@media (min-width: 384px) {
+    .dbt1 { font-size: 1.5rem; margin-top: 65px; }
+}
+@media (min-width: 768px) {
+    .dbt1 { font-size: 40px; margin-top: 76px; }
+}
+@media (min-width: 992px) {
+    .dbt1 { font-size: 40px; }
+}
+
+/* Subtítulo o Descripción */
+.dbs2 {
+    /* Dinámico: #5a575a en claro, gris claro en oscuro */
+    color: var(--texto-secundario);
+    
+    margin: 0px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+@media (min-width: 384px) {
+    .dbs2 {
+        font-size: 14.4px;
+        width: 330px;
+        justify-self: center;
+    }
+}
+@media (min-width: 768px) {
+    .dbs2 {
+        width: 730px;
+        font-size: large;
+    }
+}
+@media (min-width: 992px) {
+    .dbs2 {
+        width: 900px;
+        font-size: 19.2px;
+    }
+}
+
+
+/* ==========================================================================
+   9. ESTRUCTURA DEL CANTO (COLUMNAS Y WRAPPERS)
+   ========================================================================== */
+.canto-column {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.canto-content-wrapper {
+    display: flex;
+    flex-direction: column; /* Apilado por defecto */
+    gap: 20px;
+    width: 96%;
+    transition: background-color 0.3s ease;
+}
+
+@media (min-width: 384px) {
+    .canto-content-wrapper { margin-left: 5%; }
+}
+
+@media (min-width: 768px) {
+    .canto-content-wrapper { margin-left: 4%; }
+}
+
+@media (min-width: 992px) {
+    .canto-content-wrapper {
+        width: 992px;
+        flex-direction: row; /* En fila para escritorio */
+        justify-content: space-between;
+    }
+    .canto-content-wrapper.stacked-layout {
+        flex-direction: column;
+    }
+    .canto-column {
+        width: calc(50% - 20px);
+    }
+    .canto-content-wrapper.stacked-layout .canto-column {
+        width: 100%;
+    }
+}
+
+/* MODO UNA SOLA COLUMNA */
+.canto-content-wrapper.single-column-mode {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.canto-content-wrapper.single-column-mode #canto-left-container {
+    width: 100%;
+    padding-left: 7%;
+    padding-right: 1%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 384px) {
+    .canto-content-wrapper.single-column-mode #canto-left-container {
+        width: 380px; padding-left: 5%; padding-right: 0.5%;
+    }
+}
+@media (min-width: 768px) {
+    .canto-content-wrapper.single-column-mode #canto-left-container {
+        width: 768px; padding-left: 5%; padding-right: 0.5%;
+    }
+}
+@media (min-width: 992px) {
+    .canto-content-wrapper.single-column-mode #canto-left-container { width: 992px; }
+}
+
+.canto-content-wrapper.single-column-mode #canto-right-container {
+    display: none;
+}
+
+/* ==========================================================================
+   10. LÍNEAS DE TEXTO Y ACORDES
+   ========================================================================== */
+.linea-canto {
+    position: relative;
+    margin-bottom: 0px;
+    text-align: left;
+    padding-top: 10px;
+    min-height: 33px;
+    color: var(--texto-principal); /* Asegura legibilidad en oscuro */
+}
+
+@media (min-width: 384px) { .linea-canto { min-height: 26px; } }
+@media (min-width: 768px) { .linea-canto { min-height: 12px; } }
+@media (min-width: 992px) { .linea-canto { min-height: 33px; } }
+
+/* Letra del canto */
+.tx { font-weight: normal; }
+.as { font-weight: bold; } /* Asamblea */
+
+/* ACORDES POSICIONADOS */
+.nota-posicionada {
+    position: absolute;
+    font-family: sans-serif, cursive, 'system-ui', 'Franklin Gothic Medium', Arial;
+    font-weight: bold;
+    
+    /* Dinámico: Rojo original en claro, acento brillante en oscuro */
+    color: var(--accent);
+    
+    background-color: transparent;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-size: 16px;
+    z-index: 10;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+@media (min-width: 384px) { .nota-posicionada { top: 0px; } }
+@media (min-width: 768px) { .nota-posicionada { top: -2px; } }
+@media (min-width: 992px) { .nota-posicionada { top: -1px; } }
+
+.red { color: #ff0000 !important; }
+
+/* ==========================================================================
+   11. MODALES (SELECCIÓN DE ACORDES / ALERTAS)
+   ========================================================================== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    /* Dinámico: Blanco en claro, #2c2c2e en oscuro */
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    z-index: 9999;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos extra para el contenido del modal en modo oscuro */
+body.dark-theme .modal-content {
+    border: 1px solid var(--borde-divisor);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ==========================================================================
+   12. LISTA DE ACORDES (SELECTOR)
+   ========================================================================== */
+.chord-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.chord-item {
+    /* Dinámico: Gris claro en modo normal, Gris oscuro en modo oscuro */
+    background-color: var(--bg-contenedores);
+    color: var(--texto-principal);
+    border: 1px solid var(--borde-divisor);
+    
+    padding: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease, color 0.2s ease;
+}
+
+.chord-item:hover {
+    background-color: var(--borde-divisor);
+    transform: translateY(-2px);
+}
+
+.chord-item:active {
+    background-color: var(--bg-header); /* Feedback visual con el color de acento */
+    color: var(--texto-blanco);
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   13. TEXTO Y LETRA DEL CANTO
+   ========================================================================== */
+.letra {
+    font-size: 20.8px;
+    line-height: 1.6;
+    
+    /* Dinámico: Color oscuro en claro, Blanco suave en oscuro */
+    color: var(--texto-principal);
+    
+    white-space: pre-wrap;
+    transition: color 0.3s ease;
+}
+
+/* Ajustes de tamaño responsivo para letra y notas */
+@media (max-width: 383px) {
+    .letra { font-size: 12px; }
+    .nota-posicionada { font-size: 12px; }
+    .modal-content { padding: 20px; }
+    .chord-list { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); }
+}
+
+@media (min-width: 344px) {
+    .letra { font-size: 16px; }
+    .nota-posicionada { font-size: 14.4px; }
+}
+
+@media (min-width: 384px) {
+    .letra { font-size: 16px; }
+    .nota-posicionada { font-size: 14.4px; }
+}
+
+@media (min-width: 768px) {
+    .letra { font-size: 29.92px; }
+    .nota-posicionada { font-size: 21.12px; }
+}
+
+@media (min-width: 992px) {
+    .letra { font-size: 22.4px; }
+    .nota-posicionada { font-size: 17.6px; }
+}
+
+/* ==========================================================================
+   14. ETIQUETAS DE SECCIÓN (C., A., N., etc.)
+   ========================================================================== */
+.ta, .tc, .tn, .tca, .tc1, .ta1, .ta2, .ta3, .niño, .hombres, .mujeres, 
+.melisma, .melisma1, .bis, .pa, .aleluya, .stp, .ctp, .rpn {
+    position: relative;
+    padding-left: 0px;
+    min-height: 24px;
+    width: 99%;
+}
+
+/* Estilos COMPARTIDOS por todos los indicadores (::before) */
+.ta::before, .tc::before, .tn::before, .tca::before, .ta1::before, 
+.ta2::before, .ta3::before, .niño::before, .hombres::before, .mujeres::before, 
+.melisma::before, .melisma1::before, .bis::before, .pa::before, .tc1::before, 
+.tc2::before, .aleluya::before, .stp::before, .ctp::before, .rpn::before {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    font-family: Arial, sans-serif;
+    line-height: 1.3;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Media queries para posicionamiento de etiquetas */
+@media (min-width: 384px) {
+    .ta::before, .tc::before, .tn::before, .ta1::before, .ta2::before, .ta3::before, 
+    .niño::before, .hombres::before, .mujeres::before, .melisma::before, 
+    .melisma1::before, .bis::before, .pa::before, .tc1::before, .tc2::before,
+    .aleluya::before, .stp::before, .ctp::before, .rpn::before {
+        font-size: 14.4px; left: -17px; top: 14px;
+    }
+    .tca::before { font-size: 14.4px; margin-top: 14px; left: -35px; }
+}
+
+@media (min-width: 768px) {
+    .ta::before, .tc::before, .tn::before, .ta1::before, .ta2::before, .ta3::before, 
+    .niño::before, .hombres::before, .mujeres::before, .melisma::before, 
+    .melisma1::before, .bis::before, .pa::before, .tc1::before, .tc2::before,
+    .aleluya::before, .stp::before, .ctp::before, .rpn::before {
+        font-size: 25.6px; left: -33px; top: 20px;
+    }
+    .tca::before { font-size: 26.08px; margin-top: 18px; left: -68px; }
+}
+
+@media (min-width: 992px) {
+    .ta::before, .tc::before, .tn::before, .ta1::before, .ta2::before, .ta3::before, 
+    .niño::before, .hombres::before, .mujeres::before, .melisma::before, 
+    .melisma1::before, .bis::before, .pa::before, .tc1::before, .tc2::before,
+    .aleluya::before, .stp::before, .ctp::before, .rpn::before {
+        font-size: 19.68px; margin-top: -4px; left: -34px;
+    }
+    .tca::before { font-size: 19.68px; margin-top: 17px; left: -54px; }
+}
+
+/* Color GRIS para la mayoría (Atenuado en oscuro) */
+.ta::before, .tc::before, .tn::before, .tca::before, .ta1::before, .ta2::before, 
+.ta3::before, .niño::before, .hombres::before, .mujeres::before, .bis::before, 
+.pa::before, .tc1::before, .tc2::before {
+    /* Dinámico: Gris original suave o Gris atenuado en modo oscuro */
+    color: var(--texto-secundario);
+    opacity: 0.6;
+}
+
+.aleluya::before { font-weight: bolder; color: var(--accent); }
+
+/* Contenidos de indicadores */
+.tc::before, .tc1::before, .tc2::before { content: "C."; }
+.stp::before { content: "SEÑOR TEN PIEDAD."; }
+.ctp::before { content: "CRISTO TEN PIEDAD."; }
+.rpn::before { content: "RUEGA POR NOSOTROS."; }
+.ta::before { content: "A."; }
+.ta1::before { content: "A1."; }
+.ta2::before { content: "A2."; }
+.ta3::before { content: "A3."; }
+.tn::before { content: "N."; }
+.tca::before { content: "C.A."; }
+.niño::before { content: "Niños:"; }
+.hombres::before { content: "Hombres:"; }
+.mujeres::before { content: "Mujeres:"; }
+.aleluya::before { content: "A.\00a0\00a0\ ALELUYA."; }
+.melisma::before { content: "[melisma]"; color: var(--accent); }
+.melisma1::before { content: "[melisma]"; }
+.bis::before { content: "BIS A."; }
+.pa::before { content: "P."; }
+
+/* ==========================================================================
+   15. LÍNEAS DIVISORIAS (HR)
+   ========================================================================== */
+hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid var(--borde-divisor);
+    width: 100%;
+    padding: 0;
+    transition: border-color 0.3s ease;
+}
+
+@media (min-width: 384px) { hr { width: 341px; margin-left: 0px; } }
+@media (min-width: 768px) { hr { width: 758px; margin-left: 0px; } }
+@media (min-width: 992px) { hr { width: 100%; } }
+
+
+/* ==========================================================================
+   16. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.pie {
+    width: 100%;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0px 0px 10px 0px;
+    transition: padding 0.3s ease;
+}
+
+@media (min-width: 384px) { .pie { padding: 5px 0px 15px 0px; } }
+@media (min-width: 768px) { .pie { padding: 5px 0px 15px 0px; } }
+@media (min-width: 992px) { .pie { padding: 5px 0px 15px 0px; } }
+
+/* ENLACES DE CATEGORÍA */
+#cantoCategories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    min-width: min-content;
+    max-width: 100%;
+    text-align: end;
+}
+
+.category-link {
+    display: inline-block;
+    /* Dinámico: Blanco en claro, Gris oscuro en oscuro */
+    background-color: var(--bg-principal);
+    color: var(--SangreDeCristo);
+    
+    padding: 5px 10px;
+    border-radius: 0px;
+    text-decoration: none;
+    font-size: 14.4px;
+    transition: all 0.2s ease;
+}
+
+.category-link:hover {
+    background-color: var(--SangreDeCristo);
+    color: var(--vblancas);
+}
+
+/* Ajuste de categoría en modo oscuro */
+body.dark-theme .category-link {
+    background-color: var(--bg-contenedores);
+    color: var(--texto-principal);
+    border: 1px solid var(--borde-divisor);
+}
+
+body.dark-theme .category-link:hover {
+    background-color: var(--accent);
+    color: var(--texto-blanco);
+}
+
+/* ==========================================================================
+   17. ELEMENTOS DE DISEÑO (RAYAS Y ESPACIADOS)
+   ========================================================================== */
+.mt { margin-top: 20px; }
+
+.dbr { /* Raya dbaez */
+    border-top: 1px ridge var(--SangreDeCristo);
+    border-bottom: none; border-left: none; border-right: none;
+    border-top-width: thick;
+}
+
+@media (min-width: 992px) {
+    .dbr { padding: 10px 21px 10px 21px; }
+}
+
+.nCanto {
+    color: var(--accent); /* Dinámico */
+    font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+    text-align: start;
+}
+
+/* ==========================================================================
+   18. AUDIO Y REPRODUCTOR
+   ========================================================================== */
+.saudio {
+    z-index: 9999;
+    opacity: 0.6;
+    background-color: var(--bg-contenedores);
+    outline: none;
+    border-radius: 0px;
+    display: none; 
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-theme .saudio {
+    filter: invert(100%) hue-rotate(180deg); /* Inversión para que el player sea visible en oscuro */
+    opacity: 0.8;
+}
+
+@media (min-width: 384px) {
+    .saudio { position: fixed; width: 384px; margin-left: -1px; height: 22px; }
+}
+@media (min-width: 768px) {
+    .saudio { position: fixed; margin-left: -1px; width: 100%; height: 28px; }
+}
+@media (min-width: 992px) {
+    .saudio { margin-left: -20px; width: 1121px; height: 35px; }
+}
+
+/* ==========================================================================
+   19. MODAL DE IMÁGENES DE ACORDES (DICCIONARIO VISUAL)
+   ========================================================================== */
+#chordImagesModal .modal-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.chord-image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chord-image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+    border: 1px solid var(--borde-divisor);
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--bg-contenedores); 
+}
+
+.chord-image-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.chord-image-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.chord-image-item span {
+    font-weight: bold;
+    color: var(--chord-color-default-text);
+    font-size: 14.4px;
+}
+
+/* Colores Dinámicos de Acordes (Mantenemos tu lógica de colores) */
+.chord-image-item.chord-color-do, .chord-image-item.chord-color-dodi { background-color: var(--chord-color-do); }
+.chord-image-item.chord-color-re, .chord-image-item.chord-color-readd { background-color: var(--chord-color-re); }
+.chord-image-item.chord-color-mi, .chord-image-item.chord-color-mi6, 
+.chord-image-item.chord-color-miaj, .chord-image-item.chord-color-mimaj7 { background-color: var(--chord-color-mi); }
+.chord-image-item.chord-color-fa, .chord-image-item.chord-color-faaj, 
+.chord-image-item.chord-color-faaj13, .chord-image-item.chord-color-fa5-di { background-color: var(--chord-color-fa); }
+.chord-image-item.chord-color-sol, .chord-image-item.chord-color-sol6, .chord-image-item.chord-color-di { background-color: var(--chord-color-sol); }
+.chord-image-item.chord-color-la, .chord-image-item.chord-color-la6 { background-color: var(--chord-color-la); }
+.chord-image-item.chord-color-si { background-color: var(--chord-color-si); }
+
+/* Contraste de texto para amarillos (Mi) */
+.chord-image-item.chord-color-mi span, .chord-image-item.chord-color-mi6 span, 
+.chord-image-item.chord-color-mia span, .chord-image-item.chord-color-miaj span { color: black; }
+
+/* MODAL DE IMAGEN GRANDE */
+.modal-content.large-image-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#largeChordImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+/* ==========================================================================
+   20. ICONOS PERSONALIZADOS (MATERIAL SYMBOLS LOCAL)
+   ========================================================================== */
+.mso1, .mso2 {
+    font-family: 'Material Symbols Outlined Local';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 149%;
+    
+    /* Dinámico: Blanco en cabecera roja, o Texto Principal en otros contextos */
+    color: var(--texto-blanco);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto Hover para Iconos Locales */
+.mso1:hover, .mso2:hover {
+    color: var(--accent); /* Cambia al rojo acento definido en el tema */
+}
+
+/* Caso específico: Botón Ojo (Mostrar Asamblea) */
+#showAllAsambleaBtn .mso1 {
+    transition: transform 0.2s ease-in-out;
+}
+
+#showAllAsambleaBtn .mso1:hover {
+    transform: scale(1.1); /* Efecto de pulso */
+}
+
+/* ==========================================================================
+   21. BOTONES DE ICONO PEQUEÑOS (IBUTTON)
+   ========================================================================== */
+.ibutton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    color: var(--texto-blanco);
+}
+
+.ibutton:hover {
+    /* Fondo blanco en claro, gris claro en oscuro para resaltar */
+    background-color: var(--vblancas);
+}
+
+/* Al hacer hover en el botón, el icono dentro debe cambiar de color */
+.ibutton:hover .mso, 
+.ibutton:hover .mso1 {
+    color: var(--SangreDeCristo);
+}
+
+/* ==========================================================================
+   22. ICONOS MATERIAL GENERALES (MSO)
+   ========================================================================== */
+.mso {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    display: flex; /* Para alineación de contenido */
+    align-content: center;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    
+    color: var(--texto-blanco);
+    transition: color 0.2s ease;
+}
+
+/* Ajuste de color para iconos en modo oscuro fuera de la cabecera */
+body.dark-theme .mso:not(.top-row-controls .mso) {
+    color: var(--texto-principal);
+}
+
+/* ==========================================================================
+   23. ESTILOS DE TEXTO Y UTILIDADES
+   ========================================================================== */
+.ncan-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.fontstyle { font-style: italic; }
+.fontsizelarge { font-size: large; }
+.fontsizemedium { font-size: medium; }
+.width { width: max-content; }
+
+/* Tipografía Gris (Atenuada en oscuro) */
+.ttgray {
+    font-variant: petite-caps;
+    display: flex;
+    color: var(--texto-secundario);
+    transition: color 0.3s ease;
+}
+
+/* Tipografía Roja (Acento dinámico) */
+.ttred {
+    font-weight: bolder;
+    display: flex;
+    color: var(--accent);
+    transition: color 0.3s ease;
+}
+
+.ttpeq { font-variant: petite-caps; display: flex; }
+
+/* Posicionamiento responsivo para etiquetas de texto */
+@media (min-width: 384px) {
+    .ttgray, .ttred { margin-left: -16px; }
+    .s1 { margin-top: -18px; }
+}
+@media (min-width: 768px), (min-width: 992px) {
+    .ttgray, .ttred { margin-left: -33px; }
+    .s1 { margin-top: -18px; }
+}
+
+/* ==========================================================================
+   24. ETIQUETAS DE CABECERA DE CATEGORÍA (PRECATECUMENADO, ETC.)
+   ========================================================================== */
+.cantosprecatecumenado, .cantoscatecumenado, 
+.cantosliturgicos, .cantoseleccion {
+    position: relative;
+    min-height: 24px;
+    width: 99%;
+}
+
+.cantosprecatecumenado::before, .cantoscatecumenado::before, 
+.cantosliturgicos::before, .cantoseleccion::before {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    font-weight: 800;
+
+    /* Dinámico: Gris original en claro, Gris azulado en oscuro */
+    color: var(--texto-secundario);
+    opacity: 0.5;
+}
+
+/* Contenidos de las etiquetas */
+.cantosprecatecumenado::before { content: "PRECATECUMENADO"; }
+.cantoscatecumenado::before    { content: "CATECUMENADO"; }
+.cantosliturgicos::before      { content: "CANTOS LITÚRGICOS"; }
+.cantoseleccion::before        { content: "ELECCION"; }
+
+/* Media Queries para ajuste de tamaño de etiquetas de sección */
+@media (min-width: 384px) {
+    .cantosprecatecumenado::before { margin-top: -128px; font-size: x-large; width: 336px; }
+    .cantoscatecumenado::before    { margin-top: -135px; font-size: x-large; width: 336px; }
+    .cantosliturgicos::before      { margin-top: -115px; font-size: xx-large; width: 100%; }
+    .cantoseleccion::before        { margin-top: -115px; font-size: xx-large; width: 100%; }
+}
+@media (min-width: 768px) {
+    .cantosprecatecumenado::before { font-size: xxx-large; margin-top: -143px; width: 725px; }
+    .cantoscatecumenado::before, .cantosliturgicos::before, .cantoseleccion::before { 
+        font-size: xxx-large; margin-top: -143px; width: 100%; 
+    }
+}
+@media (min-width: 992px) {
+    .cantosprecatecumenado::before { margin-top: -140px; width: 852px; }
+    .cantoscatecumenado::before    { margin-top: -140px; width: 935px; }
+    .cantosliturgicos::before      { margin-top: -140px; width: 883px; }
+    .cantoseleccion::before        { margin-top: -140px; width: 883px; }
+}
+
+/* ==========================================================================
+   25. BOTÓN DE ICONO FINAL (AJUSTE DE HOVER)
+   ========================================================================== */
+.icon-button {
+    width: 43px; 
+    font-size: 24px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* El color base siempre blanco por estar en el header */
+    color: var(--texto-blanco);
+    
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    vertical-align: middle; 
+    transition: all 0.2s ease;
+    padding: 0;
+    text-align: center;
+    line-height: unset !important;
+}
+
+.icon-button:hover {
+    /* Fondo blanco en claro, gris claro en oscuro */
+    background-color: var(--vblancas);
+    
+    /* Icono en rojo SangreDeCristo en claro, Acento en oscuro */
+    color: var(--SangreDeCristo) !important;
+    
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* Ajuste específico para el hover en modo oscuro */
+body.dark-theme .icon-button:hover {
+    color: var(--accent) !important;
+    background-color: var(--texto-principal);
+}

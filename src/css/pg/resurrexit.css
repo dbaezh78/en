@@ -1,0 +1,14 @@
+﻿        @media (min-width: 384px) {
+                .container {margin-left: 0%;}
+                .gloria {margin-top: -36px;margin-left: 123px;}
+        }
+        @media (min-width: 768px) {
+                .container {margin-left: 0%;}
+                .gloria {margin-top: -57px;margin-left: 225px;}
+        }
+        @media (min-width: 992px) {
+                .container {margin-left: 12%;}
+                .gloria {margin-top: -46px;margin-left: 168px;}
+        }
+
+        

@@ -1,0 +1,51 @@
+﻿@media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 25px;margin-left: 109px;margin-top: 0px;}
+            .ast::before {margin-top: -2px;margin-left: 136px;}
+            .ast1::before {margin-top: 2px;margin-left: 117px;}
+            .ast2::before {margin-top: 3px;margin-left: 228px;}
+            .ast3::before {margin-top: 3px;margin-left: 15px;}
+            .ast4::before {margin-top: -3px;margin-left: 195px;}
+            .tx {margin-top: -26px; font-size: small;}
+            .cruz {margin-left: 68px;}
+            .sangre {margin-left: 90px;}
+            .izq {margin-left: -20px;font-size: larger;}
+            .top1 {top:1px}
+            .f15 .letra{font-size: 8px;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 39px;margin-left: 201px;margin-top: 0px;}
+            .ast::before {margin-top: 3px;margin-left: 248px;}
+            .ast1::before {margin-top: 9px;margin-left: 215px;}
+            .ast2::before {margin-top: 7px;margin-left: 74px;}
+            .ast3::before {margin-top: 7px;margin-left: 26px;}
+            .ast4::before {margin-top: -3px;margin-left: 195px;}
+            .tx {margin-top: -26px; font-size: small;}
+            .cruz {margin-left: 120px;}
+            .sangre {margin-left: 155px;}
+            .izq {margin-left: -33px;font-size: 18.4px;}
+            .top1 {top:1px}
+            .f15 .letra{font-size: 8px;}
+
+            .adl1 {margin-left: 205px;}
+            .adl2 {margin-left: 280px;}
+
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 10%;}
+            .r1::before {height: 25px;margin-left: 155px;margin-top: 3px;}
+            .ast::before {margin-top: -3px;margin-left: 195px;}
+            .ast1::before {margin-top: 7px;margin-left: 163px;}
+            .ast2::before {margin-top: 3px;margin-left: 56px;}
+            .ast3::before {margin-top: 3px;margin-left: 19px;}
+            .ast4::before {margin-top: -3px;margin-left: 195px;}
+            .tx {margin-top: -26px; font-size: small;}
+            .adl1 {margin-left: 157px;}
+            .adl2 {margin-left: 210px;}
+            .izq {margin-left: -33px;font-size: 10px;}
+            .top1 {top:1px}
+            .f15 .letra{font-size: 8px;}
+            .width{width:max-content}
+            .canto-content-wrapper {gap: 50px;}
+        }

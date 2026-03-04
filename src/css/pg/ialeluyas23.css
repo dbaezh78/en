@@ -1,0 +1,39 @@
+        @media (min-width: 384px) {.container {margin-left: 0%;}}
+        @media (min-width: 768px) {.container {margin-left: 0%;}}
+        @media (min-width: 992px) {.container {margin-left: 8%;}}
+
+.mod1 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.mod2 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.mod3 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.ta::before, .tc::before {
+    @media (min-width: 992px) {
+        font-size: 1.23rem;
+        margin-top: -4px;
+        left: -34px;
+    }
+}
+
+.bg {
+    z-index: 999;
+    background: #ffffcb;
+}
+
+.fssmall {
+    font-size: small;
+    margin-top: -22px
+}

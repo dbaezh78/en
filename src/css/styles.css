@@ -1,0 +1,978 @@
+body {
+    
+    /* font-family: 'Arial', sans-serif; */
+    font-family: apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+    padding: 2px 0px 2px 0px;
+    /*padding: 2px 5px 2px 0px;*/
+
+    background-color: #87ceeb24;
+/*  line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto; */
+        overflow-x: hidden; /* Agrega esta línea */
+        align-self: center;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    font-style: italic;
+    font-family: apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: Neocat;
+    src: url('/src/font/Neocat-Regular_3.0.ttf') format('truetype');
+    font-display: swap; /* Muestra texto con fuente fallback mientras carga */
+}
+
+.MsgClass {
+    font-family: Neocat, Georgia, serif; /* Georgia es similar a serif */
+    font-size: 23px; 
+    text-align: justify;
+}
+
+.lista-con-puntos p {
+    padding-left: 16px;
+    position: relative;
+    list-style-type: none;
+    margin-left: 7px;
+
+  }
+  .lista-con-puntos p::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: black;
+  }
+
+.rdstyle{
+    margin-top: 0%;
+    width: 18%;
+    /*transform: rotateZ(-30deg);*/
+}
+.tResucito {
+    font-family: Neocat;
+    color: #bc0009;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -4.5px;
+    margin-bottom: -30px;
+}
+    @media(min-width: 384px){
+        .tResucito {margin-top: 1%;}
+    }
+    @media(min-width: 768px){
+        .tResucito {margin-top: 0%;}
+    }
+    @media(min-width: 992px){
+        .tResucito {margin-top: 2%;}
+    }
+
+.introData{
+    font-family: Neocat;
+    font-size: 3rem;
+    color: #bc0009;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: bold;
+    margin-top: -2px;
+}
+
+.cristo {
+    position: fixed;
+    z-index: -9999;
+
+    @media (min-width: 1px){
+        width: 33%;
+        left: 0px;
+        top: 100px;
+    }
+
+    @media (min-width: 384px){
+        width: 33%;
+        left: 0px;
+        top: 100px;
+    }
+    @media (min-width: 768px){
+        width: 28%;
+        left: 0px;
+        top: 9%;
+    }
+    @media (min-width: 992px){
+        width: 15%;
+        left: 0px;
+        top: 2%;
+    }
+
+    @media (min-width: 802px) {
+        width: 27%;
+        top: 34px;
+    }
+    @media (min-width: 1000px) {width: 24%;}
+    @media (min-width: 1300px) and (min-width: 1700px) {width: 17%;}
+}
+
+
+.cima {
+    width: 16%;
+    padding: 1.3%;
+}
+
+.sRD {
+    width: 3%;
+    margin-bottom: -122px;
+/*    margin-left: -9px; */
+}
+
+.sIn {
+    font-size: 33%;
+    margin-left: -15px;
+    color: goldenrod;
+}
+header {
+    text-align: right;
+/*    margin-bottom: 5px;*/
+    padding-bottom: 2px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #444;
+    /*margin-bottom: 5px;*/
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #667;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.controls {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.search-container {
+    display: flex;
+    align-items: stretch;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 3px;
+    border: 0px solid #dddddd00;
+    border-radius: 0;
+    font-size: 16px;
+    margin-left: 9px;
+    clip-path: content-box;
+}
+
+.filters-container {
+    background-color: rgba(248, 249, 250, 0.9);
+    padding: 8px;
+    border-top: 1px solid rgba(238, 238, 238, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.filters {
+    margin-top: 0;
+}
+
+.filters h3 {
+    margin-bottom: 3px;
+    color: #555;
+}
+
+.category-filters, .moment-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-filter, .moment-filter {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.category-filter:hover, .moment-filter:hover {
+    opacity: 0.8;
+    background-color: #bc0009;
+}
+
+.category-filter[data-category="Precatecumenado"] {
+    width: fit-content;
+    max-width: fit-content;
+    background-color: white;
+    color: #333;
+    border: 1px solid #9e9e9e;
+}
+
+.category-filter[data-category="Precatecumenado"]:hover {
+    background-color: #333;
+    color: white;
+}
+
+.category-filter[data-category="Catecumenado"] {
+    width: fit-content;
+    max-width: fit-content;
+    background-color: #2196F3;
+    color: white;
+}
+
+.category-filter[data-category="Catecumenado"]:hover {
+background-color: white;
+color: #2196F3;
+border: 1px solid #2196F3;
+}
+
+.category-filter[data-category="Eleccion"] {
+    width: fit-content;
+    max-width: fit-content;
+    background-color: #8BC34A;
+    color: white;
+}
+
+.category-filter[data-category="Eleccion"]:hover {
+background-color: white;
+color: #8BC34A;
+border: 1px solid #8BC34A;
+}
+
+.category-filter[data-category="Liturgia"] {
+    width: fit-content;
+    max-width: fit-content;
+    background-color: #FFEB3B;
+    color: #333;
+}
+
+.category-filter[data-category="Liturgia"]:hover {
+    background-color: white;
+color: black;
+border: 1px solid #FFEB3B;
+
+}
+
+
+.category-filter[data-category="Catolicos"] {
+    width: fit-content;
+    max-width: fit-content;
+    background-color: #a73bff;
+    color: #ffffff;
+}
+
+.category-filter[data-category="Catolicos"]:hover {
+    background-color: white;
+color: black;
+border: 1px solid #52067d;
+
+}
+
+
+.moment-filter {
+    width: fit-content;
+    max-width: fit-content;
+    background-color: #9E9E9E;
+    color: white;
+}
+
+.moment-filter.active {
+    background-color: #bc0009;
+    /*font-weight: bold;*/
+}
+
+.songs-list {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+    /*gap: 0px;*/
+    justify-items:stretch;
+}
+
+.song-card { /* Esta es la tarjeta del canto*/
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background-color: white;
+    padding: 18px;       /* Estaba en 20px */
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.song-title {
+    /*font-size: 1.33rem;*/
+    margin-bottom: 2px;
+    color: #222;
+    font: icon;
+    font-size: large;
+}
+
+.song-subtitle {
+    font-size: 0.9rem;
+    color: #667;
+    margin-bottom: 10px;
+    font-style: italic;
+    /*text-align: center;*/
+    margin-top: 0px;
+}
+
+.song-category {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    /*margin-bottom: 5px;*/
+}
+
+.song-moment {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    background-color: #607D8B;
+    color: white;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.song-card[data-category="Precatecumenado"] {
+    border: 1px solid white;
+    border-left: 8px solid #9e9e9e6b;
+    color: #ddd;
+    box-shadow: 5px 5px 12px #9e9e9ed9;
+}
+
+.song-card[data-category="Catecumenado"] {
+    border: 1px solid #2196f3;
+    border-left: 8px solid #2196f3;
+    box-shadow: 5px 5px 12px #2196f3;
+}
+
+.song-card[data-category="Eleccion"] {
+    border: 1px solid #8BC34A;
+    border-left: 8px solid #8BC34A;
+    box-shadow: 5px 5px 12px #8BC34A;
+}
+
+.song-card[data-category="Liturgia"] {
+    border: 1px solid #FFEB3B;
+    border-left: 8px solid #FFEB3B;
+    box-shadow: 5px 5px 12px #FFEB3B;
+}
+
+.song-card[data-category="Catolicos"] {
+    border: 1px solid #6b21f3;
+    border-left: 8px solid #6b21f3;
+    box-shadow: 5px 5px 12px #6b21f3;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Mueve el texto completamente a la izquierda */
+/*
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+    */
+
+/* Asegurar que los otros estilos permanezcan igual */
+
+/*  DESCONTINUADO ***************************
+.dbboton {
+    display: flex;
+    padding: 0px 6px;
+    margin: 0px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 89%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+.dbboton:hover {
+    background-color: #3367d6; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+}
+
+.dbboton:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+*****************************/
+
+.dblink-yt{
+    background-color: rgb(249, 12, 12);
+    color: white;
+}
+
+.dblink-yt:hover{
+    background-color: white;
+    color: rgb(249, 12, 12);
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+.dblink-fb{
+    background-color: rgb(15, 98, 230);
+    color: white;
+}
+
+.dblink-fb:hover{
+    background-color: rgb(231, 234, 248);
+    color: blue;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+.dblink-ev {
+    color: white;  
+    background-color: rgb(20, 154, 249);
+}
+
+.dblink-ev:hover {
+    color: rgb(20, 154, 249);
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+
+}
+
+.dblink-laudes{
+    background-color: #ffffcc;
+    color: #0f0f02;
+}
+
+.dblink-laudes:hover{
+    background-color: #2196f3;
+    color: #ffffcc;
+    transition: all 0.3s ease;
+    transform: scale(1.1);    
+}
+
+.dblink-install {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.dblink-install:hover{
+    background-color: white;
+    color: black;
+}
+
+.installApp {
+    background-color: rgb(32, 175, 218);
+    color: white;
+    display:inline !important;
+    width: fit-content;
+
+    /*
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    */
+}
+
+.installApp:hover {
+    background-color: #148def;
+    color: goldenrod;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+.dblink-ac {
+    background-color: #ffffff00;
+    color: black;
+    overflow: hidden; /* Oculta el texto que sobresale */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    position: relative; /* Necesario para el posicionamiento del texto */
+    display: inline-block; /* Cambiado para mejor control del ancho */
+    width: 100%;
+    max-width: 100%;
+}
+
+.dblink-ac:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: #1095cc;
+    width: 100%;
+    max-width:100%;
+}
+
+.dblink, .dblink-rojo, .dblink-fb {
+
+    display: flex;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* Nuevos estilos para los botones de filtro y limpiar */
+#clearSearch {
+    padding: 10px 10px;
+    background-color: #ffffff00;
+    border-color: ffffff00;
+    color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    margin-right: 0px;
+    width: auto;}
+
+#clearSearch:hover {
+    background-color: rgba(193, 225, 243, 0.5);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+#clearSearch::before {
+    content: "🗑️";
+    font-size: 18px;
+}
+
+.filter-toggle-button {
+    padding: 10px 10px;
+    background-color: #ffffff00;
+    border-color: ffffff00;
+    color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    margin-right: 0px;
+    width: auto;
+}
+
+.filter-toggle-button:hover {
+    background-color: rgba(193, 225, 243, 0.5);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.filter-toggle-button::before {
+    content: "🔍";
+}
+
+/* 15/4/2025 11.2*/
+/* Oculta los checkboxes visualmente (pero siguen funcionales) */
+/* Oculta el mensaje inicialmente */
+.mensaje-kiko, .msg-jp2 {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #87ceeb;
+}
+
+/* Muestra el mensaje cuando el checkbox está marcado */
+#mostrar-mensaje:checked ~ .mensaje-kiko {
+    display: block;
+}
+
+#mostrar-mensaje-jp2:checked ~ .msg-jp2 {
+    display: block;
+}
+/*
+
+.mensaje-kiko {
+    display: none;
+    margin-top: -27px;
+    padding: 9px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+*/
+
+
+
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    
+    .filter-toggle-button {
+        border-radius: 20px 20px 0 0;
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 0px;
+        align-items: stretch;
+    }
+    
+    .search-container input {
+        border-radius: 0;
+        margin-bottom: 5px;
+    }
+    
+    #clearSearch {
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+    
+    /* 
+    .category-filters, .moment-filters {
+        flex-direction: column;
+    }
+    */
+}
+
+.resucito-linea {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Espacio entre elementos */
+    white-space: nowrap; /* Evita saltos de línea */
+}
+  
+.rd-colores {
+    font-size: 0.7em; /* Más pequeño que "RESUCITÓ" */
+    display: inline-flex;
+}
+  
+.r-azul {
+    color: blue;
+}
+  
+.d-rojo {
+    color: red;
+}
+
+.d-blanco {
+    color: #6b4323cd;
+}
+
+.cbox {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+}
+
+
+@media (max-width: 385px) {
+    .cima {
+        width: 50%;
+        /*margin-top: -9%;*/
+    }
+
+    .sRD {
+        margin-top: -1%;
+        width: 3%;
+        margin-bottom: -8px;
+        margin-left: -9px;
+    }
+    
+
+    #clearSearch {
+        width: 26%;
+        border-radius: 0 20px 20px 0;
+    }
+    .search-container input {
+        border-radius: 0;
+        margin-bottom: 5px;
+        width: 40%;
+    }
+    .filter-toggle-button {
+        width: auto;
+        border-radius: 50%;
+    }
+
+    .filter-toggle-button {
+        padding: 10px 10px;
+        background-color: #ffffff00;
+        border-color: ffffff00;
+        color: rgba(0, 0, 0, 0.7);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s;
+        margin-right: 0px;
+        width: auto;
+    }
+
+    .rdstyle{
+        margin-top: -18.5%;
+        text-align: right;
+        width: 16%;
+/*        transform: rotateZ(-30deg);*/
+    }
+
+    .tResucito{
+        font-size: 3rem;
+        color: #bc0009;
+        text-align: center;
+        /*font-weight: bold;*/
+    }
+
+    .punto-rojo {
+        display: none;
+        color: red;
+        font-size: 1em;
+        margin-left: 66%;
+        margin-top: 1px;
+    }
+
+    .sIn {
+        font-size: 33%;
+        margin-left: -1%;
+        margin-right: 1%;
+        color: goldenrod;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .cima {
+        width: 50%;
+        /*margin-top: -9%;*/
+    }
+
+    .sRD {
+        margin-top: -1%;
+        width: 11%;
+        margin-bottom: -36px;
+        margin-left: 0px;
+    }
+
+    .sIn {
+        font-size: 33%;
+        margin-left: -13px;
+        margin-right: 3%;
+        color: goldenrod;
+    }
+    
+    #clearSearch {
+        width: auto;
+        border-radius: 50%;
+    }
+    .search-container input {
+        border-radius: 0;
+        margin-bottom: 0px;
+        width: 40%;
+        clip-path: content-box;
+    }
+    .filter-toggle-button {
+        width: auto;
+        border-radius: 50%;
+    }
+
+    .filter-toggle-button {
+        padding: 10px 10px;
+        background-color: #ffffff00;
+        border-color: #ffffff00;
+        color: rgba(0, 0, 0, 0.7);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s;
+        margin-right: 0px;
+        width: auto;
+    }
+    
+    .rdstyle{
+        margin-top: -26%;
+        text-align: right;
+        width: 16%;
+        float: right;
+/*        transform: rotateZ(-30deg);*/
+    }
+
+    .tResucito{
+        font-size: 3rem;
+        color: #bc0009;
+        text-align: center;
+        margin-bottom: -11px;
+/*        font-weight: bold;*/
+    }
+
+    .punto-rojo {
+        display: none;
+        color: red;
+        font-size: 1em;
+        margin-left: 66%;
+        margin-top: 1px;
+    }
+}
+
+.bgdif {
+    mix-blend-mode: difference;
+    background-color: white;
+    background-color: lightskyblue;
+    mix-blend-mode: difference;
+    background-color: skyblue;
+    background-color: inherit;
+    text-align: right;
+    padding: 8px;
+    border-radius: 20px 22px 0 0;
+}
+
+.cwh {      /* Color Blanco*/
+    color: red;
+    font-weight: bolder;
+}
+
+.list {
+    color: black;
+    font-weight: bolder;   
+}
+
+
+
+
+.material-symbols-outlined.arrow {
+            transition: transform 0.3s;
+        }
+
+        .material-symbols-outlined {
+    display: flex;
+    align-content: center;
+    font-size: 24px;
+    line-height: 1;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.material-symbols-outlined:hover {
+    color: var(--SangreDeCristo);
+    color: goldenrod;
+}
+
+/* Oculta las secciones privadas por defecto */
+#wrapper-nueva-lista, 
+#wrapper-mis-listas,
+.perfil-container { 
+    display: none; 
+}
+
+.icon-button {
+    /* Usamos un tamaño fijo suficiente para el círculo del hover */
+    width: 32px; 
+    height: 32px;
+    
+    /* Centrado perfecto del icono */
+    /*display: inline-flex;*/
+    /*display: inline-table !important;*/
+    font-size: 250% !important;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    color: black;
+    border: none;
+    background: transparent;
+    
+    /* Ajuste de posición sin usar top/left para evitar saltos */
+    vertical-align: middle; 
+    
+    /* Suavizamos la transición */
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    
+    /* El tamaño de fuente debe ser igual en ambos estados para no mover el layout */
+    padding: 0; /* Quitamos padding manual para que el tamaño sea exacto */
+}
+
+.icon-button:hover {
+    color: white;
+    background-color: #780606;
+    /* Ya no cambiamos font-size ni dimensiones aquí, así no se mueve */
+    text-decoration: none;
+}
+
+.avatar {
+    position: relative;
+    display: flex;
+
+    /*align-items: center;
+    justify-content: center;*/
+
+    flex-direction: column;
+}
+
+.avatarborde {
+    background:none;
+    border:none; 
+    cursor:pointer; 
+    /*
+    position: relative;
+    padding:7px;
+    top: 10px;*/
+}
+
+
+.icon-button {
+    /* Usamos un tamaño fijo suficiente para el círculo del hover */
+    width: 40px; 
+    height: 40px;
+    
+    /* Centrado perfecto del icono */
+    /*display: inline-flex;*/
+    /*display: inline-table !important;*/
+    font-size: 200% !important;
+    align-items: center;
+    justify-content: center;
+    color: #02175b;
+    
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    
+    /* Ajuste de posición sin usar top/left para evitar saltos */
+    vertical-align: middle; 
+    
+    /* Suavizamos la transición */
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    
+    /* El tamaño de fuente debe ser igual en ambos estados para no mover el layout */
+    padding: 0; /* Quitamos padding manual para que el tamaño sea exacto */
+    text-align: center;
+    line-height: unset !important;
+
+}
+
+.icon-button:hover {
+    background-color: #780606;
+    color: white !important;
+    /* Ya no cambiamos font-size ni dimensiones aquí, así no se mueve */
+    text-decoration: none;
+    text-align: center;
+    line-height: unset !important;
+}

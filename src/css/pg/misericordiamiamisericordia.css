@@ -1,0 +1,20 @@
+﻿        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {font-size: 1.3rem;font-weight: bold;height: 30px;margin-left: 282px;margin-top: -7px;}
+            .sub {margin-top: -36px;}
+            .junte {margin-top: -17px;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 49px;margin-left: 566px;margin-top: -2%;}
+            .sub {margin-top: -58px;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {font-size: 1.3rem;font-weight: bold;height: 62px;margin-left: 426px;margin-top: -7%;}
+            .sub {margin-top: -46px;}
+            .junte {margin-top: -20px;}
+        }
+
+.zindex {z-index: 999;}
+

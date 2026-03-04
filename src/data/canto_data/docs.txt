@@ -1,0 +1,15 @@
+documentacion
+
+para agregar notas y una url al canto
+
+opc1:
+    nCanURL: "index.html?canto=cantodemoises1",
+
+
+opc2:
+    nCanURL: "/resucito/src/index.html?canto=cantodemoises1",
+
+
+
+        nCan: "", //Nota del canto = nCan
+        nCanURL: "index.html?canto=cantodemoises1",

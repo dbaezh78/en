@@ -1,0 +1,926 @@
+/* SELECT.CSS - Estilos esenciales para la página de selección */
+:root {
+    --SangreDeCristo: #bc0009;
+}
+
+body {
+    font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 384px) {padding: 0px;}
+
+    @media (min-width: 768px) {
+    }
+
+}
+
+.perfil-container {
+    width: 100%;
+    max-width: 93%;
+    background: white;
+    padding: 25px;
+    border-radius: 0px;
+    /*border-radius: 20px;*/
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+        @media (min-width: 384px) {padding: 4px;}
+}
+
+.header-seleccion {
+    font-family: 'Neocat';
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.home-icon-container {
+    /* Specific styles for home icon container if needed */
+}
+
+.dbhome {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 42px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    position: absolute;
+    top: -1px;
+    left: 712px;
+    color: white;
+    text-align: center;
+    /* background-color: #780606;*/
+    z-index: 9999;
+    display: flex;
+    align-content: space-around;   
+    
+    @media (min-width: 384px) {
+        top: -2px;
+        left: -3px;
+    } 
+
+    @media (min-width: 768px) {
+        top: -2px;
+        left: -4px;
+    }
+
+    @media (min-width: 992px) {
+        top: -2px;
+        left: 30.7%;
+    } 
+
+}
+
+.dbhome:hover {
+    background-color: white;
+    z-index: 9999;
+    color: black
+}
+
+.header-seleccion h1 {
+    margin: 0;
+    color: var(--SangreDeCristo);
+    font-size: 24px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--SangreDeCristo);
+    font-size: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    /* border-radius: 12px; */
+    font-size: 16px;
+    outline: none;
+}
+
+/* Buscador */
+.buscador-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.buscador-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+    /*padding-left: 45px; /* Espacio para la lupa */
+    padding-right: 40px; /* Espacio para la X */
+    border-radius: 25px; 
+}
+
+#btnLimpiar {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: #999;
+    display: none;
+}
+
+/* Lista de Cantos */
+.lista-scroll {
+    max-height: 350px;
+    overflow-y: auto;
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 10px;
+
+
+    @media (min-width: 384px) {padding: 4px;}
+
+}
+
+.item-canto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.item-canto span { 
+    font-size: 20px; 
+    color: #333; 
+
+        @media (min-width: 384px) {
+            top: -2px;
+            left: -3px;
+            font-size: 18px; 
+    } 
+
+    @media (min-width: 768px) {
+            top: -2px;
+            left: -3px;
+            font-size: 23px; 
+    } 
+}
+
+/* Switches */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider { background-color: var(--SangreDeCristo); }
+input:checked + .slider:before { transform: translateX(22px); }
+
+.contador-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--SangreDeCristo);
+}
+
+.btn-accion {
+    width: 100%;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.cola-visual {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    margin-top: 15px;
+    min-height: 40px;
+    border-top: 1px dashed #ddd;
+    flex-wrap: wrap;
+}
+
+.canto-tag {
+    background: #f0f0f0;
+    padding: 3px 5px;
+    white-space: nowrap;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid #e0e0e0;
+}
+
+.canto-tag span {
+    background: var(--SangreDeCristo);
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para las tarjetas de listados */
+.tarjeta-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+   /* margin-bottom: 10px;*/
+    border: 1px solid #eee;
+}
+
+.info-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-lista strong {
+    color: #333;
+    font-size: 15px;
+}
+
+.info-lista span {
+    color: #888;
+    font-size: 12px;
+}
+
+.btn-ver {
+    background: none;
+    border: none;
+    color: var(--SangreDeCristo);
+    cursor: pointer;
+}
+
+/* Clases para colapsar (asegúrate de que estén) */
+.cfg-close { display: none; }
+.collapsed .arrow-icon { transform: rotate(-90deg); transition: 0.3s; }
+.arrow-icon { transition: 0.3s; }
+
+/* ... (Manten lo que ya tienes y añade esto al final) ... */
+
+.perfil-section {
+    border: 1px solid #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.section-header {
+    padding: 15px;
+    background: #fdfdfd;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+    color: var(--SangreDeCristo);
+}
+
+.collapsed .arrow-icon {
+    transform: rotate(-90deg);
+}
+
+.cfg-close {
+    display: none;
+}
+
+.section-content {
+    padding: 1px;
+    border-top: 1px solid #eee;
+}
+
+.tarjeta-lista {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 0px;
+    /*border-radius: 10px;*/
+    /*margin-bottom: 8px;*/
+}
+
+/* ESTILOS DE BOTONES*/
+
+.acciones-lista {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    @media (min-width: 384px) {
+        gap: 2px;    
+     }
+}
+
+.btn-ir {
+    background: none;
+    border: none;
+    color: #2196F3; /* Azul para diferenciar del editar */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn-ver {
+    background: none;
+    border: none;
+    color: var(--SangreDeCristo);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta-lista:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    transition: all 0.2s;
+}
+
+/*  CSS DE MOSTRAR Y OCULTAR CANTO*/
+
+.tarjeta-lista-wrapper {
+    margin-bottom: 2px;
+    border: 1px solid #eee;
+    /*border-radius: 12px;*/
+    overflow: hidden;
+    background: #fff;
+}
+
+.tarjeta-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background: #fff;
+    transition: background 0.2s;
+
+    @media (min-width: 384px) {
+        padding: 9px;    
+     }
+    
+}
+
+.tarjeta-lista:hover {
+    background: #fdfdfd;
+}
+
+.detalle-lista-cantos {
+    background: #fcfcfc;
+    border-top: 1px solid #f0f0f0;
+    padding: 4px 15px;
+}
+
+.sub-item-canto {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.sub-item-canto:last-child {
+    border-bottom: none;
+}
+
+.sub-item-canto .num {
+    color: var(--SangreDeCristo);
+    font-weight: bold;
+    font-size: 11px;
+}
+
+
+/* FUNCION MODAL PARA ABRIR CANTO*/
+
+
+/* MODAL FULLSCREEN VISOR */
+.modal-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header-visor {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-cerrar-visor {
+    background: #eee;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.btn-cerrar-visor.confirmando {
+    background: var(--SangreDeCristo);
+    color: white;
+}
+
+.tooltip-cerrar {
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+/*
+.modal-body-visor {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+*/
+
+.titulo-visor {
+    color: var(--SangreDeCristo);
+    font-family: 'Neocat', sans-serif;
+    margin-bottom: 30px;
+}
+
+.texto-canto-visor {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Para respetar los saltos de línea del canto */
+    color: #333;
+}
+
+
+.sub-item-canto:hover {
+    background-color: #f0f0f0;
+}
+
+/* Asegúrate de que el cuerpo del modal ocupe el resto de la pantalla */
+.modal-body-visor {
+    flex-grow: 1; 
+    /*
+    height: calc(100vh - 70px); 
+    width: 100%;
+    overflow: hidden; 
+    */
+}
+
+.modal-body-visor iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.modal-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body-visor {
+    flex-grow: 1;
+    height: 100%; /* Para que el iframe se estire */
+    width: 100%;
+}
+
+.cfg-close {
+    display: none !important;
+}
+
+
+.material-symbols-outlined {
+    font-size: 31px;
+}
+
+.xclose {
+    position: fixed;
+    margin-top: 4px;
+    background-color: #780606;
+    color: white;
+    border: 0;
+/*    margin-left: 70.4%;
+    margin-top: 5px;
+    font-size: x-large;
+    
+    position: absolute;
+
+    */
+}
+
+
+@media (min-width: 384px) {
+    .xclose {
+        margin-left: 0.4%;
+    } 
+}
+@media (min-width: 768px) {
+.xclose {
+        margin-top: 4px;
+    } }
+@media (min-width: 992px) {
+.xclose {
+        top: 0.001%;
+        left: 27.8%;
+        }
+    }
+
+
+/* ELIMINAR LISTADO */
+/* Estilo para el icono de borrar */
+.icon-delete {
+    color: #cc0000; /* Un rojo para advertencia */
+    cursor: pointer;
+    font-size: 22px;
+    transition: transform 0.2s, color 0.2s;
+    margin-left: 10px; /* Espacio después del lápiz */
+}
+
+.icon-delete:hover {
+    color: #ff0000;
+    transform: scale(1.15);
+}
+
+/* Ajuste para el contenedor de acciones de la lista */
+.acciones-lista {
+    display: flex;
+    align-items: center;
+}
+
+
+/* RENDERIZAR LISTA*/
+
+/* Contenedor individual de cada canto */
+.item-canto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #eee; /* Línea divisoria sutil */
+}
+
+/* Canto Gris (Pares) */
+.item-canto:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Canto Blanco (Impares) */
+.item-canto:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Efecto al pasar el mouse o tocar */
+.item-canto:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para el texto del canto */
+.titulo-canto-seleccion {
+    font-size: 1rem;
+    color: #333;
+    flex-grow: 1; /* Para que el texto ocupe el espacio y sea clicable */
+    user-select: none; /* Evita que se seleccione el texto al hacer clics rápidos */
+}
+
+.tarjeta-lista-wrapper:nth-child(even) .tarjeta-lista { background-color: #f9f9f9; }
+
+/* Cebreado para los registros de cantos al seleccionar */
+.item-canto:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.03); /* Gris muy sutil */
+}
+
+/* Cebreado para los listados guardados */
+.tarjeta-lista-wrapper:nth-child(even) .tarjeta-lista {
+    background-color: #f8f9fa;
+}
+
+/* Resaltado al pasar el mouse */
+.item-canto:hover, .tarjeta-lista:hover {
+    background-color: #f0f0f0 !important;
+    border-left: 4px solid var(--SangreDeCristo);
+}
+
+/* */
+.importar-accion {
+    padding-right: 10px;
+}
+
+.btn-importar-icono {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f0f0f0;
+    color: #2e7d32; /* Verde bosque */
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #ddd;
+}
+
+.btn-importar-icono:hover {
+    background-color: #e8f5e9;
+    border-color: #2e7d32;
+    transform: scale(1.05);
+}
+
+.btn-importar-icono span {
+    vertical-align: middle;
+}
+
+.btn-icono {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #666;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.btn-icono:hover { transform: scale(1.1); }
+.btn-icono.share:hover { color: #1a73e8; }
+.btn-icono.export:hover { color: #2e7d32; }
+.btn-icono.delete:hover { color: #d93025; }
+
+.btn-circular-import {
+    background: #e8f0fe;
+    color: #1a73e8;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #1a73e8;
+}
+
+
+/* FILTRADO O BUSCADOR*/
+
+.buscador-listas-wrapper {
+    margin-bottom: 10px;
+}
+
+.buscador-bar {
+    display: flex;
+    align-items: center;
+    background: #f1f3f4;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.buscador-bar:focus-within {
+    background: white;
+    border-color: #1a73e8;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.buscador-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+.buscador-bar .material-symbols-outlined {
+    color: #5f6368;
+}
+
+.status-msg-vacia {
+    text-align: center;
+    padding: 30px 10px;
+    color: #666;
+}
+
+.status-msg-vacia p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.link-crear-lista {
+    color: #1a73e8; /* Azul Google */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed #1a73e8;
+    transition: all 0.2s;
+}
+
+.link-crear-lista:hover {
+    color: #1557b0;
+    border-bottom-style: solid;
+}
+
+/* x para Cerrar en buscador */
+
+.buscador-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f1f3f4;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+#inputBuscador {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-icon {
+    color: #5f6368;
+}
+
+.close-icon {
+    color: #5f6368;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.close-icon:hover {
+    color: #202124;
+}
+
+.buscador-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f1f3f4;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+.buscador-input-container input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-icon, .close-icon {
+    color: #5f6368;
+}
+
+.close-icon {
+    cursor: pointer;
+    font-size: 20px !important;
+}
+
+.btn-circular-import {
+    background: #e8f0fe;
+    color: #1a73e8;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.blueColor {
+    color: rgb(0, 166, 188);
+}
+
+
+.icon-button {
+    /* Usamos un tamaño fijo suficiente para el círculo del hover */
+    width: 40px; 
+    height: 40px;
+    
+    /* Centrado perfecto del icono */
+    /*display: inline-flex;*/
+    display: inline-table !important;
+    font-size: 200% !important;
+    align-items: center;
+    justify-content: center;
+    color: #02175b;
+    
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    
+    /* Ajuste de posición sin usar top/left para evitar saltos */
+    vertical-align: middle; 
+    
+    /* Suavizamos la transición */
+    transition: all 0.2s ease;
+    border-radius: 0%;
+    
+    /* El tamaño de fuente debe ser igual en ambos estados para no mover el layout */
+    padding: 0; /* Quitamos padding manual para que el tamaño sea exacto */
+    text-align: center;
+    line-height: unset !important;
+
+}
+
+.icon-button:hover {
+    background-color: #780606;
+    color: white !important;
+    /* Ya no cambiamos font-size ni dimensiones aquí, así no se mueve */
+    text-decoration: none;
+    text-align: center;
+    line-height: unset !important;
+}
+
+.pright {
+    margin-left: auto;
+}

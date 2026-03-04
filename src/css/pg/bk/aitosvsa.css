@@ -1,0 +1,16 @@
+.container {margin-left: 0%;}
+.canto-content-wrapper.single-column-mode {
+    align-items: normal;
+}
+
+h1 {
+    @media (min-width: 384px) {
+        width: 100%;
+    }
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+    @media (min-width: 992px) {
+        width: 992px;
+    }
+}

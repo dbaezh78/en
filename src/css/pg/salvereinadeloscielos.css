@@ -1,0 +1,14 @@
+        .melisma::before {font-style: italic;}
+
+        @media (min-width: 384px) {
+                .container {margin-left: 0%;}
+                .melisma::before {font-size: 0.9rem;left: 90px;margin-top: -3px;}
+        }
+        @media (min-width: 768px) {
+                .container {margin-left: 0%;}
+                .melisma::before {font-size: 1.3rem;left: 164px;margin-top: -3px;}
+        }
+        @media (min-width: 992px) {
+                .container {margin-left: 0%;}
+                .melisma::before {font-size: 1.1rem;left: 128px;margin-top: -7px;}
+        }

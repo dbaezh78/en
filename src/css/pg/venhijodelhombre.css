@@ -1,0 +1,64 @@
+﻿.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a8,.a9,.a10,.a11,.a12, .t0 { width: fit-content; }
+
+        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 129px;margin-left: 238px;margin-top: -11%;}
+            .a2{margin-top: -34px;margin-left: 200px;}
+            .a4{margin-top: -36px;margin-left: 40px;}
+            .a5{margin-top: -36px;margin-left: 88px;}
+            .a6{margin-top: -36px;margin-left: 126px;}
+            .a7{margin-top: -36px;margin-left: 176px;}
+            .a8{margin-top: -36px;margin-left: 215px;}
+            .a9{margin-top: -36px;margin-left: 53px;}
+            .a10{margin-top: -36px;margin-left: 128px;}
+            .a11{margin-top: -36px;margin-left: 190px;}
+            .a12{margin-top: -38px;margin-left: 218px;}
+            
+            .b1{margin-top: -20px;}
+            
+            .ast, .ast1, .ast2 {font-size: medium !important}
+            .ast {top: -40px;margin-left: 100px;}
+            .ast1 {top: -40px;margin-left: 103px;}
+            .ast2 {top: -40px;margin-left: 45px;}
+                }
+
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 216px;margin-left: 446px;margin-top: -9%;}
+            .a2{margin-top: -59px;margin-left: 270px;}
+            .a4{margin-top: -57px;margin-left: 70px;}
+            .a5{margin-top: -57px;margin-left: 154px;}
+            .a6{margin-top: -57px;margin-left: 222px;}
+            .a7{margin-top: -57px;margin-left: 306px;}
+            .a8{margin-top: -57px;margin-left: 379px;}
+            .a9{margin-top: -57px;margin-left: 100px;}
+            .a10{margin-top: -57px;margin-left: 229px;}
+            .a11{margin-top: -57px;margin-left: 342px;}
+            .a12{margin-top: -57px;margin-left: 406px;}
+
+            .ast {top: -65px;margin-left: 167px !important;}
+            .ast1 {top: -65px;margin-left: 190px;}
+            .ast2 {top: -62px;margin-left: 85px;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {height: 173px;margin-left: 337px;margin-top: -6%;}
+            .a1{margin-top: -45px;margin-left: 95px;}
+            .a2{margin-top: -47px;margin-left: 200px;}
+            .a3{margin-top: -45px;margin-left: 53px;}
+            .a4{margin-top: -45px;margin-left: 59px;}
+            .a5{margin-top: -45px;margin-left: 138px;}
+            .a6{margin-top: -45px;margin-left: 195px;}
+            .a7{margin-top: -45px;margin-left: 270px;}
+            .a8{margin-top: -45px;margin-left: 325px;}
+            .a9{margin-top: -45px;margin-left: 79px;}
+            .a10{margin-top: -45px;margin-left: 182px;}
+            .a11{margin-top: -45px;margin-left: 273px;}
+            .a12{margin-top: -45px;margin-left: 306px;}
+    
+            .b1{margin-top: -20px;}
+    
+            .ast {top: -52px;margin-left: 167px;}
+            .ast1 {top: -52px;margin-left: 163px;}
+            .ast2 {top: -52px;margin-left: 67px;}
+        }

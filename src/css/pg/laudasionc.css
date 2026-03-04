@@ -1,0 +1,83 @@
+﻿        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 52px;margin-left: 253px;margin-top: -9%;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 91px;margin-left: 479px;margin-top: -8%;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {height: 73px;margin-left: 363px;margin-top: -9%;}
+        }
+
+.sp1 {
+    @media (min-width: 992px) {
+        color: red !important;
+        font-size: small;
+        margin-left: -46px;
+        margin-top: -40px;
+    }
+}
+
+.nota {position: relative;min-height: 0px;}
+
+.nota::before {
+    content: "NOTA:";
+    font-family: 'Franklin Gothic Medium';
+    position: absolute;
+    font-size: 1.23rem;
+    font-weight: bolder;
+    align-content: center;
+    color: rgb(196 76 75);;
+    margin-left: 0px;
+    /*    margin-top: 0%;*/
+
+    @media (min-width: 384px){
+        font-size: 0.8rem;
+        margin-left: 0px;
+
+    }
+    @media (min-width: 768px){
+        font-size: 1.8rem;
+        margin-left: 0px;
+        margin-top: -12px;
+    }
+    @media (min-width: 992px){
+        font-size: 1.3rem;
+        margin-left: 45px;
+        margin-top: 3px;
+    }
+}
+
+
+.small {
+    min-height: 0px;
+    font-size: 70%;
+    margin-top: -17px;
+    text-align: justify;
+    width: 76%;
+    margin-top: 10px;
+
+    @media (min-width: 384px){
+        width: 88%;
+        font-size: 82%;
+    }
+    @media (min-width: 768px){
+        font-size: 83%;
+    }
+    @media (min-width: 992px) {
+        font-size: 72%;
+        width: 78%;
+    }
+}
+
+.ta::before, .tc::before {
+    @media (min-width: 384px){}
+    @media (min-width: 768px){}
+    @media (min-width: 992px){
+        font-size: 1.23rem;
+        margin-top: -6px;
+        left: -34px;
+    }
+}

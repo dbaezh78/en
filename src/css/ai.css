@@ -1,0 +1,268 @@
+/* CSS PARA LIBRO DE CANTOS*/
+
+@media (min-width: 384px){
+    .cristo {width: 34%;}
+}
+@media (min-width: 768px){}
+@media (min-width: 992px){
+    .cristo {width: 13%;}
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3ffcb99;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 6px;
+}
+
+.container {
+    background: #ffffcb;
+    padding: 1%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 96%;
+    max-width: 99%;
+    margin-bottom: auto;
+}
+
+    @media (min-width: 384px){
+        #semanas-container {
+            width: 100%;
+            justify-self: center;
+            text-align-last: center;
+        }
+    }
+        @media (min-width: 768px){
+            #semanas-container {
+            width: 100%;
+            justify-self: center;
+            text-align-last: center;
+        }
+    }
+
+    @media (min-width: 992px){
+            #semanas-container {
+            width: 38%;
+            justify-self: center;
+            text-align-last: center;
+        }
+    }
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 1em;
+}
+
+h2 {
+    color: #4CAF50;
+    margin: 1.5em 0 0.5em 0;
+    font-size: 1.2em;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 1.5em;
+}
+
+.info-header {
+    background-color: #780606e8;
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Contenedores para los grupos de botones */
+.ciclo-botones, .tiempo-botones, .semana-botones, .meses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px; /* Espacio entre los botones */
+    margin-bottom: 1.5em;
+}
+
+/* Estilo unificado para los botones de ciclo, tiempo y semana */
+.ciclo-btn, .tiempo-btn, .semana-btn {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 105%;
+
+    @media (min-width: 384px) {
+        padding: 2% 4%;
+        margin: 1%;
+    }
+    @media (min-width: 768px) {
+        padding: 1% 2%;
+        margin: 1%;
+    }
+    @media (min-width: 992px) {
+        padding: 1% 3%;
+        margin: 1%;
+    }
+
+}
+
+/* Estilo específico para los botones de mes (con más padding) */
+.mes-btn {
+    padding: 10px 15px; /* Padding ajustado para los meses */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efecto hover */
+.ciclo-btn:hover, .tiempo-btn:hover, .semana-btn:hover, .mes-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo para los botones seleccionados */
+.ciclo-btn.selected, .tiempo-btn.selected, .semana-btn.selected, .mes-btn.selected {
+    background-color: #780606e8;
+    color: white;
+    font-weight: bold;
+}
+
+#go-button {
+    padding: 1% 2%;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+#go-button:hover {
+    background-color: #45a049;
+}
+
+/* Contenedor de las fiestas, ahora con un diseño más limpio */
+.fiestas-mes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.fiesta-btn {
+    width: max-content;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 1%;
+}
+
+.fiesta-btn:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Añade esto al final de tu archivo ai.css */
+
+
+.homeb {
+    display: flex;
+    position: relative;
+    gap: 1px;
+    z-index: 1000;
+    color: #ffffff;
+    font-size: 2em;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    gap: 8px;
+}
+
+        @media (min-width: 384px){
+            .homeb {justify-content: center;}
+        }
+        @media (min-width: 768px){
+            .homeb {
+                justify-content: center;
+            }
+        }
+        @media (min-width: 992px){
+            .homeb {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                /*align-items: flex-end;*/
+                
+            }
+        }
+
+        .flextime{
+            position: inherit;
+        }
+
+.home {
+    color: white;
+    gap: 1%;
+}
+        @media (min-width: 384px) {
+            .home {
+            }
+        }
+        @media (min-width: 768px) {
+            .home {
+            }
+        }
+        @media (min-width: 992px) {
+            .home {
+            }
+        }
+
+.home:hover {
+    transform: scale(1.1); /* Efecto al pasar el cursor */
+}
+
+    @media (min-width: 384px) {
+        .fizquierda {margin-left: 2px;}
+        .homec {margin-left: 40px;}
+        .fderecha {margin-left: 73px;}
+        
+    }
+    @media (min-width: 768px) {
+        .fizquierda {margin-left: 2%;}
+        .homec {margin-left: 4.4%;}
+        .fderecha {margin-left: 6%;}
+
+    }
+    @media (min-width: 992px) {
+        .fderecha {margin-left: 100px;}
+
+    }
+
+
+
+
+
+
+
+
+
+

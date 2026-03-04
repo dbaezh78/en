@@ -1,0 +1,19 @@
+﻿        @media (min-width: 384px) {
+                .container {margin-left: 0%;}
+                .r1::before {height: 132px;margin-left: 179px;margin-top: -10%;}
+                .r2::before {height: 132px;margin-left: 286px;margin-top: -10%;}
+                .melisma::before {font-style: italic;margin-top: -4px;left: 183px;}
+        }
+        @media (min-width: 768px) {
+                .container {margin-left: 0%;}
+                .r1::before {height: 227px;margin-left: 325px;margin-top: -10%;}
+                .r2::before {height: 229px;margin-left: 527px;margin-top: -10%;}
+                .melisma::before {font-style: italic;margin-top: -4px;left: 346px;font-size: larger;}
+        }
+        @media (min-width: 992px) {
+                .container {margin-left: 12%;}
+                .melisma::before {font-style: italic;margin-top: -4px;left: 264px;}
+                .r1::before {height: 169px;margin-left: 253px;margin-top: -9%;}
+                .r2::before {height: 169px;margin-left: 394px;margin-top: -9%;}
+        }
+

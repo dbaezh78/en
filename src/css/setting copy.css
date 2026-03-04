@@ -1,0 +1,234 @@
+:root {
+    --font-size-base: 16px; /* Valor por defecto */
+}
+
+
+/* Colores dinámicos para toda la web */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+/* Esto hará que todas las páginas respondan al ajuste de fuente */
+body {
+    font-size: var(--font-size-base) !important;
+}
+
+
+/* Cuando el body tiene la clase dark-theme, ajustamos el modal */
+body.dark-theme #modal-global-settings .settings-frame {
+    background: #1c1c1e;
+    color: #ffffff;
+}
+
+body.dark-theme #modal-global-settings .setting-item {
+    border-bottom: 1px solid #2c2c2e;
+}
+
+body.dark-theme #modal-global-settings .setting-item label {
+    color: #ebebeb;
+}
+
+body.dark-theme #modal-global-settings select {
+    background: #2c2c2e;
+    color: white;
+    border: 1px solid #3a3a3c;
+}
+
+body.dark-theme #modal-global-settings .settings-header {
+    background: #000000;
+    border-bottom: 1px solid #2c2c2e;
+}
+
+/* Contenedor principal (Overlay) */
+#modal-global-settings.settings-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px); /* Efecto desenfoque fondo */
+    z-index: 999999; /* Por encima de todo */
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: all;
+}
+
+#modal-global-settings.active {
+    opacity: 1;
+}
+
+/* El Frame que sube */
+#modal-global-settings .settings-frame {
+    width: 100%;
+    max-width: 500px; /* Limite para tablets/PC */
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 24px 24px 0 0;
+    padding: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 -10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+#modal-global-settings.active .settings-frame {
+    transform: translateY(0);
+}
+
+/* Cabecera Oscura Modular */
+#modal-global-settings .settings-header {
+    background: #1a1a1b; /* Color oscuro elegante */
+    color: white;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modal-global-settings .settings-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+#modal-global-settings .btn-close-settings {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Contenido de los Ajustes */
+#modal-global-settings .settings-content {
+    padding: 10px 24px 40px 24px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#modal-global-settings .setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#modal-global-settings .setting-item label {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Estilos de los controles (Select) */
+#modal-global-settings select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Switch Estilo iOS */
+#modal-global-settings .switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+#modal-global-settings .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#modal-global-settings .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+#modal-global-settings .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+#modal-global-settings input:checked + .slider {
+    background-color: #bc0009; /* Tu color rojo */
+}
+
+#modal-global-settings input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+
+/* Evita que el fondo se mueva cuando el modal está activo */
+body.modal-open {
+    overflow: hidden;
+    position: fixed; /* Opcional: refuerzo para iOS */
+    width: 100%;
+}
+
+/* Mejora el toque en los elementos del menú */
+#modal-global-settings .setting-item:active {
+    background-color: rgba(0,0,0,0.05);
+}
+body.dark-theme #modal-global-settings .setting-item:active {
+    background-color: rgba(255,255,255,0.05);
+}
+
+
+body.dark-theme #modal-global-settings select option {
+    background: #2c2c2e;
+    color: white;
+}
+
+
+
+#modal-global-settings .setting-item {
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    user-select: none; /* Evita que se seleccione el texto al tocar */
+}
+
+
+/* Ajuste de scroll interno para el contenido */
+#modal-global-settings .settings-content::-webkit-scrollbar {
+    width: 4px;
+}
+#modal-global-settings .settings-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}

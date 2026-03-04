@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canto y Catequesis</title>
+    <link rel="stylesheet" href="cat/src/cat.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <h1>CANTOS</h1>
+            <input type="text" id="searchInput" placeholder="Buscar canto...">
+            <div id="song-list">
+                <a href="#canto1" class="song-title" data-id="catequesis1">Título del Canto 1</a>
+                <a href="#canto2" class="song-title" data-id="catequesis2">Título del Canto 2</a>
+                </div>
+        </div>
+
+        <div id="content-container">
+            <div id="canto1" class="content-area">
+                <audio controls>
+                    <source src="cat/media/audio1.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="content-text-container">
+                    <h2>Catequesis sobre el canto 1</h2>
+                    <img src="cat/docs/img/catequesis1.jpg" alt="Imagen referente al canto 1">
+                    <p id="catequesis-canto1"></p>
+                </div>
+            </div>
+
+            <div id="canto2" class="content-area">
+                <audio controls>
+                    <source src="cat/media/audio2.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <div class="content-text-container">
+                    <h2>Catequesis sobre el canto 2</h2>
+                    <img src="cat/docs/img/catequesis2.jpg" alt="Imagen referente al canto 2">
+                    <p id="catequesis-canto2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cat/js/cat.js"></script>
+</body>
+</html>

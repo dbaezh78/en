@@ -1,0 +1,1087 @@
+/* Creado por un siervo de Cristo: Carlos David */
+
+#CristoReydereyesYSeñordeseñores {
+    --CristoMiSeñor: white
+}
+
+
+/* CSS PARA LIBRO DE CANTOS*/
+      @font-face {font-family: 'Libre Franklin';src: url('cantos/src/font/LibreFranklin-Bold.ttf') format('truetype');font-weight: 700; /* Bold */font-style: normal;font-display: swap; /* Mejor experiencia de carga */}
+      @font-face {font-family: 'Material Symbols Outlined Local';font-style: normal;font-weight: 100 700;src: url('/src/font/font.woff2') format('woff2'); /* Ajusta la ruta según tu estructura */}
+      @font-face {font-family: 'Fave';src: local('Fave Script Bold Pro'), local('Fave-Script-Bold-Pro'),url('/cantos/src/font/Fave-ScriptBoldPro.woff2') format('woff2'),url('/cantos/src/font/Fave-ScriptBoldPro.woff') format('woff'),url('/cantos/src/font/Fave-ScriptBoldPro.ttf') format('truetype');font-weight: 700;font-style: normal;}
+      @font-face {font-family: 'Franklin Gothic Medium';src: url('/src/font/FranklinGothicMedium.ttf') format('truetype');font-weight: normal;font-style: normal;font-display: swap;}
+      @font-face {font-family: Neocat; src: url('/src/font/Neocat-Regular_3.0.ttf') format('truetype'); font-display: swap; }
+
+
+
+:root {
+    --SangreDeCristo: #780606;
+    --vblancas: white;
+    --precat: white;
+    --liturgia: #FFFFCB;
+    --cat: #bde9ff;
+    --eleccion: #CEFFCF;
+
+    /* Variables de colores de fondo para el body (pueden ser más transparentes o diferentes) */
+    --precat-body-bg: rgba(255, 255, 255, 0.2);
+    --liturgia-body-bg: rgba(255, 255, 203, 0.2);
+    --cat-body-bg: rgba(189, 233, 255, 0.2);
+    --eleccion-body-bg: rgba(206, 255, 207, 0.2);
+
+
+    /* Nuevos colores de fondo para acordes */
+    --chord-color-do: #FF0000; /* Rojo Fuerte, base */
+    --chord-color-re: #FFA500; /* Naranja Energía, calidez */
+    --chord-color-mi: #FFFF00; /* Amarillo Brillante, luz */
+    --chord-color-fa: #138c13; /* Verde Frescura, equilibrio */
+    --chord-color-fas: #138c13; /* Verde Frescura, equilibrio */
+    --chord-color-sol: #1e7ec2; /* Azul Cielo Serenidad */
+    --chord-color-la: #800080; /* Violeta Misterio, profundidad */
+    --chord-color-si: #000000; /* Negro Oscuro, resolución */
+    --chord-color-default-text: white; /* Color de texto por defecto para los nombres de acordes */
+
+    /* Nuevas variables para los fondos de canto por categoría */
+    --FondoCanto-Precatecumenado: white;
+    --FondoCanto-Catecumenado: #bde9ff;
+    --FondoCanto-Liturgico: #FFFFCB;
+    --FondoCanto-Eleccion: #CEFFCF;
+
+    /* Trasfondos con 80% de transparencia */
+    --TrasfondoCanto-Precatecumenado: rgba(255, 255, 255, 0.2); /* white con 20% de opacidad */
+    --TrasfondoCanto-Catecumenado: rgba(189, 233, 255, 0.2); /* #bde9ff con 20% de opacidad */
+    --TrasfondoCanto-Liturgico: rgba(255, 255, 203, 0.2); /* #FFFFCB con 20% de opacidad */
+    --TrasfondoCanto-Eleccion: rgba(206, 255, 207, 0.2); /* #CEFFCF con 20% de opacidad */
+}
+
+
+/* REMOVIDO: Colores de fondo basados en clases en el body (antiguos) */
+/* body:has(.precat) {background-color: #282828;} */
+/* body:has(.liturgia) {background-color: #ffffe4;} */
+/* body:has(.cat) {background-color: #ebf7fd;} */
+/* body:has(.eleccion) {background-color:#eaffea;} */
+
+/* NUEVO: Clases para aplicar los fondos al body según la categoría del canto */
+
+
+
+body {
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    background-color: #f4f4f4; /* Este será el fallback si no se aplica ninguna clase de categoría */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+
+    user-select: none; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+
+
+}
+
+body::-webkit-scrollbar {
+display: none;}
+
+@media(min-width: 384px){
+    body {
+        /* background-color: white; REMOVIDO: Ahora se controla por las clases cat- */
+        padding: 0px;
+    }
+}
+@media(min-width: 768px){
+    body {
+        /* background-color: white; REMOVIDO: Ahora se controla por las clases cat- */
+        padding: 0px;
+    }
+}
+
+.container {
+    background-color: #fff;
+    padding: 66px;
+    border-radius: 1px;
+    text-align: center;
+}
+
+@media(min-width: 384px){
+    .container {
+            padding: 0px 3px 20px 3px;
+            text-align: center;
+            width: 374px;     /* normalizando posicion del contenido: no quitar*/
+            margin-left: 0px;
+        }
+    }
+
+    @media(min-width: 768px){
+    .container {
+        padding: 0px 1px 20px 0px;
+        text-align: center;
+        width: 740px;
+        margin-left: 55px;
+    }
+}
+@media(min-width: 992px){
+    .container {
+        padding: 0px 3px 50px 3px;
+        text-align: center;
+        width: 95%;
+    }
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Default for smaller screens */
+    /* NUEVO: Fondo por defecto, se sobrescribirá por las clases cat- */
+    background-color: white;
+}
+
+/* NUEVO: Clases para aplicar los fondos al main-wrapper según la categoría del canto */
+.main-wrapper.cat-precatecumenado {
+    background-color: var(--FondoCanto-Precatecumenado);
+}
+.main-wrapper.cat-catecumenado {
+    background-color: var(--FondoCanto-Catecumenado);
+}
+.main-wrapper.cat-liturgico {
+    background-color: var(--FondoCanto-Liturgico);
+}
+.main-wrapper.cat-eleccion {
+    background-color: var(--FondoCanto-Eleccion);
+}
+
+/* MAIN-WRAPPER PARA LA TAMAÑO DE LA PANTALLA*/
+
+@media(min-width: 384px){
+    .main-wrapper {
+        width: 384px; /*98%;*/
+        padding: 0px;
+        /*  align-items: center;        /* CSs para Central contenido */
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-top: 44px;
+    }
+}
+@media(min-width: 768px){
+    .main-wrapper {
+        /*width: 98%;*/
+        width: -webkit-fill-available;
+        padding: 0px;
+        align-items: center;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-top: 44px;
+    }
+}
+@media(min-width: 992px){
+    .main-wrapper {
+        width: 1080px;
+        padding: 0px 20px 0px 20px;
+        /* background-color: var(--precat); REMOVIDO: Ahora se controla por las clases cat- */
+        /*width: auto;*/        /* ESTE ES EL QUE CONTROLA EL TAMAÑO DE LA PANTALLA DEL CANTO*/
+        /*width: 992px;*/
+    }
+}
+
+.header-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.top-row-controls {
+    display: flex;
+    padding: 0px;
+    background-color: var(--SangreDeCristo);
+    position: fixed; /* Fixed for mobile/tablet */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    
+    @media (min-width: 384px) {
+        width: 384px;
+    }
+    @media (min-width: 768px) {
+        width: 800px;
+        font-size: larger;
+    }
+    @media (min-width: 992px) {
+        width: 992px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .top-row-controls {
+        position: fixed;
+        justify-content: space-between;
+        padding: 0px 40px 0px 0px;
+        left: 0px;
+        /*width: 998px;*/
+        width: 1080px;
+        justify-self: anchor-center;
+    }
+/*
+    .top-row-controls {
+        position: relative; /* Relative for desktop */
+  /*      justify-content: space-between;
+        padding: 0px 40px 0px 0px;
+        left: -20px;
+    }
+        */
+}
+
+.home-icon-container {
+    /* Specific styles for home icon container if needed */
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #5f6368;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.icon-button:hover {
+    background-color: white;
+}
+
+.material-symbols-outlined {
+    display: flex;
+    align-content: center;
+    font-size: 24px;
+    line-height: 1;
+    color: white;
+}
+
+.material-symbols-outlined:hover {
+    color: var(--SangreDeCristo);
+}
+
+.mso:hover {
+    color: var(--SangreDeCristo);
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    /* Elimina el 'gap' aquí si ya lo estás manejando con .mgap */
+}
+
+
+.mgap {
+    @media (min-width: 284px) and (max-width: 484px) {
+        gap: 0%;
+        #toggleVista {display: none;}   /* Ocultar el botón en mobile y tablet */
+    }
+
+    @media (min-width: 485px) and (max-width: 991px) {
+        gap: 35px;
+        #toggleVista {display: none;}   /* Ocultar el botón en mobile y tablet */
+    }
+
+    @media (min-width: 992px){
+        gap: 35px;
+    }
+}
+
+
+
+
+.toolbar-item {
+    vertical-align: middle;
+}
+
+.toolbar select,
+.toolbar .search-input {
+    padding: 5px 7px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+    background-color: #f9f9f9;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+.toolbar select:focus,
+.toolbar .search-input:focus {
+    outline: none;
+    border-color: goldenrod;
+    box-shadow: 0 0 0 2px rgba(90, 45, 128, 0.2);
+}
+
+.cejilla {
+    font-size: 1.2em !important;
+}
+.search-input {width: 150px;transition: width 0.5s ease;}
+
+.search-input {
+    transition: width 0.5s ease;
+    margin-left: -1%;
+    
+    @media (min-width: 384px) {
+        width: 60px;
+    }
+
+    @media (min-width: 768px) {
+        width: 80px;
+    }
+
+    @media (min-width: 992px) {
+        width: 100px;
+    }
+}
+/*
+
+@media (min-width: 384px) {.search-input {width: 80px;margin-left: -1%;}}
+@media (min-width: 768px) {.search-input {width: 80px;margin-left: -1%;}}
+@media (min-width: 992px) {.search-input {width: 100px;margin-left: -1%;}}
+*/
+
+@media (min-width: 384px) {.search-input:focus {width: 100px;}}
+@media (min-width: 768px) {.search-input:focus {width: 150px;}}
+@media (min-width: 992px) {.search-input:focus {width: 200px;}}
+
+.dbt1 {
+    text-transform: uppercase;  /* Convierte cualquier texto a Mayuscula*/
+    text-align: center;
+    color: rgb(196 76 75);
+    margin-top: 60px;
+    /*margin: 0px;*/
+}
+
+@media (min-width: 384px)  {
+    .dbt1 {
+        font-size: 1.2rem;
+        margin-top: 40px;
+    }
+}
+@media (min-width: 768px)  {
+    .dbt1 {
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 992px)  {
+    .dbt1 {
+        font-size: 2.5rem;
+    }
+}
+
+.dbs2 {
+    color: #5a575a;
+    margin: 0px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+@media (min-width: 384px) {
+    .dbs2 {
+        font-size: 0.9rem;
+        width: 330px;
+        justify-self: center;
+    }
+}
+@media (min-width: 768px) {
+    .dbs2 {
+        width: 730px;
+        font-size: large;
+    }
+}
+@media (min-width: 992px) {
+    .dbs2 {
+        width: 900px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para el diseño de dos columnas */
+.canto-content-wrapper {
+    display: flex;
+    flex-direction: column; /* Por defecto, apilado en pantallas pequeñas */
+    gap: 20px;
+    width: 100%;
+}
+
+.canto-column {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Media query para pantallas de escritorio (992px y más) */
+@media (min-width: 992px) {
+    .canto-content-wrapper {
+        width: 992px;
+        flex-direction: row; /* Por defecto en escritorio, en fila */
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .canto-content-wrapper.stacked-layout { /* Nueva clase para apilar en escritorio */
+        flex-direction: column;
+    }
+    .canto-column {
+        width: calc(50% - 20px); /* Ancho original en fila */
+    }
+    .canto-content-wrapper.stacked-layout .canto-column { /* Ancho completo cuando está apilado */
+        width: 100%;
+    }
+}
+
+/* NUEVO: Estilos para cuando un canto tiene solo una columna (lizq) */
+.canto-content-wrapper.single-column-mode {
+    flex-direction: column; /* Forzar diseño de una sola columna */
+    align-items: normal; /* Centrar el contenedor de la columna única */
+    width: 100%; /* Ocupar todo el ancho de su contenedor padre */
+    max-width: 992px; /* Limitar el ancho máximo en pantallas grandes para legibilidad */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+.canto-content-wrapper.single-column-mode #canto-left-container {
+    width: 100%; /* El contenedor izquierdo ocupa todo el ancho del wrapper */
+    padding-left: 0%; /* antes: 10% Empujar el contenido a la derecha un 10% de su ancho */
+    padding-right: 0%; /* antes: 10% Mantener el equilibrio */
+    box-sizing: border-box; /* Incluir el padding en el cálculo del ancho */
+
+    @media (min-width: 384px) {width: max-content;}
+    @media (min-width: 768px) {width: max-content;}
+    @media (min-width: 992px) {width: 992px;}
+
+}
+
+.canto-content-wrapper.single-column-mode #canto-right-container {
+    display: none; /* Ocultar el contenedor derecho */
+}
+
+/* Ajustar padding para pantallas más pequeñas en modo de una sola columna */
+@media (max-width: 767px) {
+    .canto-content-wrapper.single-column-mode #canto-left-container {
+        padding-left: 5%; /* Menos padding en pantallas pequeñas */
+        padding-right: 0px;  /* Antes: 5%*/
+    }
+}
+
+
+.linea-canto {
+    position: relative;
+    margin-bottom: 0px;
+    text-align: left;
+    padding-top: 10px;
+    min-height: 33px;
+    
+    @media (min-width: 384px) {
+        min-height: 26px;
+        width: 362px;
+    }
+    
+    @media (min-width: 768px) {
+        min-height: 12px;
+        width: 740px;
+    }
+    
+    @media (min-width: 992px) {
+        min-height: 33px;
+        width: 990px;
+    }
+}
+/*
+@media (min-width: 768px) {
+    .linea-canto {
+        padding-top: 12px;
+    }
+}*/
+
+.letra {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #2c3e50;
+    white-space: pre-wrap;
+}
+
+.red {
+    color: red !important;
+}
+
+/* Nuevas clases para el estilo del texto de la letra */
+.tx {
+    font-weight: normal;
+}
+
+.as {   /* as = asamblea*/
+    font-weight: bold;
+}
+
+.nota-posicionada {
+    position: absolute;
+    /*top: 0; Antes posicion del acorde*/
+    /*font-family: 'Franklin Gothic Medium', Arial, sans-serif;*/
+    font-family: sans-serif, cursive, 'system-ui', 'Franklin Gothic Medium', Arial;
+    font-weight: bold;
+    color: rgb(196 76 75);
+    background-color: transparent;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    font-size: 1.0em;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media (min-width: 384px) {.nota-posicionada {top: 0px;}}
+@media (min-width: 768px) {.nota-posicionada {top: -2px;}}
+@media (min-width: 992px) {.nota-posicionada {top: -1px;}}
+
+
+
+.nota-posicionada:hover {
+    background-color: #ffffff00;
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.chord-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.chord-item {
+    background-color: #f0f0f0;
+    padding: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.chord-item:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.chord-item:active {
+    background-color: #d0d0d0;
+    transform: translateY(0);
+}
+
+/* Media queries para ajustar el tamaño de fuente según el ancho de la pantalla */
+@media (max-width: 383px) {
+    .letra { font-size: 1.0em; }
+    .nota-posicionada { font-size: 0.75em; }
+    .modal-content { padding: 20px; }
+    .chord-list { grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); }
+}
+
+@media (min-width: 384px) and (max-width: 583px) {
+    .letra { font-size: 1em; }
+    .nota-posicionada { font-size: 0.9em; }
+}
+
+@media (min-width: 584px) and (max-width: 767px) {
+    .letra { font-size: 1.2em; }
+    .nota-posicionada { font-size: 1.1em; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .letra { font-size: 1.7em; }
+    .nota-posicionada { font-size: 1.32em; }
+}
+
+@media (min-width: 992px) {
+    .letra { font-size: 1.4em; }
+    .nota-posicionada { font-size: 1.1em; }
+}
+
+/* --- Nuevos estilos para etiquetas de sección --- */
+.ta, .tc, .tn, .tca, .tc1, .ta1, .ta2, .ta3, .niño, .hombres, .mujeres, .melisma, .melisma1, .bis, .pa, .aleluya
+    {
+        position: relative;
+        padding-left: 0em;
+        min-height: 1.5em;
+    }
+
+/* Estilos COMPARTIDOS por todos los ::before */
+.ta::before, .tc::before, .tn::before, .tca::before, .ta1::before, .ta2::before, .ta3::before, .niño::before,
+.hombres::before, .mujeres::before, .melisma::before, .melisma1::before, .bis::before, 
+.pa::before, .tc1::before, .tc2::before, .aleluya::before
+{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    font-family: Arial, sans-serif;
+    line-height: 1.3;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Media queries para los ::before */
+@media (min-width: 384px) {
+    .ta::before, .tc::before, .tn::before, .ta1::before, .ta2::before, .ta3::before, 
+    .niño::before, .hombres::before, .mujeres::before, .melisma::before, 
+    .melisma1::before, .bis::before, .pa::before, .tc1::before, .tc2::before,
+    .aleluya::before
+    {
+        font-size: 0.9rem;
+        left: -17px;
+        top: 14px;
+    }
+    .tca::before {
+        font-size: 0.9rem;
+        margin-top: 14px;
+        left: -35px;
+     }
+}
+@media (min-width: 768px) {
+    .ta::before, .tc::before, .tn::before, .ta1::before, .ta2::before, .ta3::before, 
+    .niño::before, .hombres::before, .mujeres::before, .melisma::before, 
+    .melisma1::before, .bis::before, .pa::before, .tc1::before, .tc2::before,
+    .aleluya::before 
+    {
+        font-size: 1.6rem;
+        left: -40px;
+        top: 20px;
+    }
+    .tca::before {
+        font-size: 1.63rem;
+        margin-top: 18px;
+        left: -68px;
+     }
+}
+@media (min-width: 992px) {
+    .ta::before, .tc::before, .tn::before, .ta1::before, .ta2::before, .ta3::before, 
+    .niño::before, .hombres::before, .mujeres::before, .melisma::before, 
+    .melisma1::before, .bis::before, .pa::before, .tc1::before, .tc2::before,
+    .aleluya::before
+    {
+        font-size: 1.23rem;
+        margin-top: -4px;
+        left: -34px;
+    }
+     .tca::before {
+        font-size: 1.23rem;
+        margin-top: 17px;
+        left: -54px;
+     }
+}
+
+/* Color GRIS para la mayoría */
+.ta::before, .tc::before, .tn::before, .tca::before, .ta1::before, .ta2::before, .ta3::before, .niño::before, .hombres::before, .mujeres::before, .bis::before, .pa::before, .tc1::before, .tc2::before
+{color: #80808065; /* Gris semitransparente */}
+
+.aleluya::before {font-weight: bolder;}
+
+/* Contenido específico para cada ::before */
+.tc::before, .tc1::before, .tc2::before
+{content: "C.";}
+
+.ta::before {content: "A.";}
+.ta1::before {content: "A1.";}
+.ta2::before {content: "A2.";}
+.ta3::before {content: "A3.";}
+.tn::before {content: "N.";}
+.tca::before {content: "C.A.";}
+.niño::before {content: "Niños:";}
+.hombres::before {content: "Hombres:";}
+.mujeres::before {content: "Mujeres:";}
+.aleluya::before {content: "A.\00a0\00a0\ ALELUYA.";} /*\00a0\ esto es para agregar espacio */
+.melisma::before {content: "[melisma]"; color:red;}
+.melisma1::before {content: "[melisma]";}
+.bis::before {content: "BIS A.";}
+.pa::before {content: "P.";}
+
+hr {
+    margin: 0;
+    color: gray;
+    width: 100%;
+    padding: 0 20px 0 20px;
+    margin-left: -20px; /* Adjusted to align with container padding */
+        @media (min-width: 992px) {
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+@media (min-width: 384px) {
+    hr {
+        width: 341px;
+        margin-left: 0px;
+    }
+}
+@media (min-width: 768px) {
+    hr {
+        width: 758px;
+        margin-left: 0px;
+    }
+}
+@media (min-width: 992px) {
+    hr {
+        width: 100%;
+        margin-right: 0px;
+    }
+}
+
+.pie{
+    width: 100%;
+    /*display: flex;*/      /* ANTERIOR CONFIGURACION PARA EL PIE DE PAGINA, POR MEJORAS*/
+    display: -webkit-inline-flex;
+    justify-content: space-between;
+    padding: 0px 0px 10px 0px;
+}
+
+/* Estilos para los enlaces de categoría */
+#cantoCategories {
+    display: flex; /* Usar flexbox para que los enlaces se alineen en fila */
+    flex-wrap: wrap; /* Permitir que los enlaces se envuelvan a la siguiente línea si no caben */
+    gap: 1px; /* Espacio entre los elementos de categoría */
+    justify-content: flex-end; /* Alinear al inicio - Antes: flex-start */
+    align-content: flex-start;  /* antes: align-items: center;*/
+    min-width: min-content;
+    max-width: 100%;
+    text-align: end;
+}
+
+.dbsize{
+    /*max-width: 33%;*/
+    align-self: start;
+}
+
+.category-link {
+    display: inline-block; /* Para que cada categoría ocupe su propio espacio */
+    background-color: var(--vblancas);
+    color: var(--SangreDeCristo);
+    padding: 5px 10px;
+    border-radius: 0px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.category-link:hover {
+    background-color: var(--SangreDeCristo);
+    color: var(--vblancas);
+}
+
+
+.pie {
+    @media (min-width: 384px){
+        width: 100%;
+        padding: 5px 0px 15px 0px;
+    }
+@media (min-width: 768px){
+        width: 100%;
+        padding: 5px 0px 15px 0px;
+    }
+@media (min-width: 992px){
+        width: 100%;
+        padding: 5px 0px 15px 0px;
+    }
+}
+
+
+.mt {
+    margin-top: 20px; /* Actualizado a 25px */
+}
+
+
+.dbr { /*Raya dbaez*/
+    border-top: 1px ridge var(--SangreDeCristo);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+            border-top-width: thick;
+
+
+    @media (min-width: 992px) {
+        padding: 10px 21px 10px 21px;
+    }
+}
+
+.cno {padding: 10px 5px 0px 5px;   }
+
+.nCanto {
+    color: red;
+    font-family: 'Franklin Gothic Medium';
+    font-size: medium;
+    text-align: start;        /* ESTE SE HA PUESTO PARA JUSTIFICAR EL CONTENIDO DE LOS COMENTARIOS*/
+}
+
+.collapsible-trigger {
+    cursor: pointer;
+}
+
+.saudio {
+    z-index: 9999;
+    opacity: 0.4;
+    /*width: -webkit-fill-available;*/
+    background-color: #f1f3f4;
+    outline: none;
+    border-radius: 0px 0px 0px 0px;
+    display: none; 
+    
+    @media (min-width: 384px) {
+        position: fixed; 
+        width: 384px;
+        margin-left: -1px;
+        /*margin-top: -5px;*/
+        height: 22px;
+    }
+
+    @media (min-width: 768px) {
+        position: fixed;
+        margin-left: -1px; 
+        width: 100%;    /*width: 784px;*/
+        height: 28px;
+    }
+
+    @media (min-width: 992px) {
+        /*position: absolute;*/
+        margin-left: -20px; 
+        width: 1121px;
+        height: 35px;
+     }
+}
+
+/* Estilo para el icono del ojo al pasar el ratón */
+#showAllAsambleaBtn .material-symbols-outlined {
+    transition: transform 0.2s ease-in-out; /* Transición suave para el efecto */
+}
+
+#showAllAsambleaBtn .material-symbols-outlined:hover {
+    transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* Estilos para la nueva modal de imágenes de acordes */
+#chordImagesModal .modal-content {
+    max-width: 800px; /* Un poco más ancho para las imágenes */
+    padding: 20px;
+}
+
+.chord-image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Columnas flexibles para imágenes */
+    gap: 15px; /* Espacio entre imágenes */
+    justify-items: center; /* Centrar imágenes en sus celdas */
+    max-height: 70vh; /* Altura máxima para hacerla scrollable */
+    overflow-y: auto; /* Habilitar scroll si es necesario */
+    padding: 10px;
+}
+
+.chord-image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Alinear el texto abajo de la imagen */
+    padding: 5px;
+    border: 1px solid #082c60;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+    /* Color de fondo por defecto, se sobrescribirá por las clases específicas */
+    background-color: #f9f9f9; 
+}
+
+.chord-image-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chord-image-item img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Eliminar espacio extra debajo de la imagen */
+    margin-bottom: 5px; /* Espacio entre imagen y nombre */
+}
+
+.chord-image-item span {
+    font-weight: bold;
+    color: var(--chord-color-default-text); /* Color de texto blanco por defecto */
+    font-size: 0.9em;
+}
+
+/* Clases para los colores de fondo de los acordes */
+.chord-image-item.chord-color-do { background-color: var(--chord-color-do); }
+.chord-image-item.chord-color-re { background-color: var(--chord-color-re); }
+.chord-image-item.chord-color-readd { background-color: var(--chord-color-re); }
+.chord-image-item.chord-color-mi { background-color: var(--chord-color-mi); }
+.chord-image-item.chord-color-mi6 { background-color: var(--chord-color-mi); }
+.chord-image-item.chord-color-miaj { background-color: var(--chord-color-mi); }
+.chord-image-item.chord-color-mimaj7 { background-color: var(--chord-color-mi); }
+.chord-image-item.chord-color-fa { background-color: var(--chord-color-fa); }
+.chord-image-item.chord-color-faaj { background-color: var(--chord-color-fa); }
+.chord-image-item.chord-color-faaj13 { background-color: var(--chord-color-fa); }
+.chord-image-item.chord-color-fa5-di { background-color: var(--chord-color-fa); }
+.chord-image-item.chord-color-sol { background-color: var(--chord-color-sol); }
+.chord-image-item.chord-color-di { background-color: var(--chord-color-sol); }
+.chord-image-item.chord-color-la { background-color: var(--chord-color-la); }
+.chord-image-item.chord-color-la6 { background-color: var(--chord-color-la); }
+.chord-image-item.chord-color-si { background-color: var(--chord-color-si); }
+
+/* Sobrescribir el color del texto para los acordes de Mi a negro */
+
+.chord-image-item.chord-color-mi span {color: black;}
+.chord-image-item.chord-color-mi6 span {color: black;}
+.chord-image-item.chord-color-mia span {color: black;}
+.chord-image-item.chord-color-miaj span {color: black;}
+
+
+/* Estilos para la nueva modal de imagen grande */
+.modal-content.large-image-content {
+    max-width: 90vw; /* Más ancho para la imagen grande */
+    max-height: 90vh; /* Más alto para la imagen grande */
+    padding: 10px; /* Reducir padding para que la imagen ocupe más espacio */
+    background-color: transparent; /* Fondo transparente para la imagen */
+    box-shadow: none; /* Sin sombra para la imagen */
+}
+
+#largeChordImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    display: block;
+    margin: auto; /* Centrar la imagen */
+}
+
+
+.mso1, .mso2 {
+  font-family: 'Material Symbols Outlined Local';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  /*border: 1px solid rgb(255, 255, 255);*/
+  border-radius: 2em;
+  cursor: pointer;
+  font-size: 149%;
+  color: white;
+}
+
+.mso1:hover {
+    color: var(--SangreDeCristo);
+}
+
+/* Estilo para el icono del ojo al pasar el ratón */
+#showAllAsambleaBtn .mso1 {
+    transition: transform 0.2s ease-in-out; /* Transición suave para el efecto */
+}
+
+#showAllAsambleaBtn .mso1:hover {
+    transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+}
+
+
+
+/*
+#showAllAsambleaBtn .material-symbols-outlined {
+    transition: transform 0.2s ease-in-out; 
+}
+
+#showAllAsambleaBtn .material-symbols-outlined:hover {
+    transform: scale(1.1);
+}
+
+*/
+
+.ibutton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.ibutton:hover {
+    background-color: white;
+}
+
+
+.mso {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    color: white;
+}
+
+.mso {
+    display: flex;
+    align-content: center;
+
+}
+
+/* Usar la variable dinámica establecida por JS para el fondo del body y principal */
+body { background-color: var(--dynamic-body-background, #f4f4f4);}
+.main-wrapper, .container, .category-link {background-color: var(--dynamic-main-background, white);}
+
+.ncan-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+
+.container { /* Lienzo transparente para no solapar el borde*/
+    background: transparent;
+}
+
+.fontstyle {font-style: italic;}
+.fontsizelarge {font-size: large;}
+.fontsizemedium {font-size: medium;}

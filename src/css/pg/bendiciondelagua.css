@@ -1,0 +1,34 @@
+        @media (min-width: 384px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 104px;margin-left: 190px;margin-top: -11%;}
+            .r2::before {height: 140px;margin-left: 220px;margin-top: -40px;}
+            .r3::before {height: 133px;margin-left: 173px;margin-top: -11%;}
+            .ast::before {margin-top: 12px;margin-left: 55px;}
+            .ast1::before {margin-top: 2px;margin-left: 132px;}
+            .ast2::before {margin-top: 4px;margin-left: 206px;}
+            .ast3::before {margin-top: 4px;margin-left: 160px;}
+            .ast4::before {margin-top: 2px;margin-left: 126px;}
+            .ast::before, .ast1::before,.ast2::before,.ast3::before,.ast4::before {font-size: 1.1rem;}
+        }
+        @media (min-width: 768px) {
+            .container {margin-left: 0%;}
+            .r1::before {height: 162px;margin-left: 348px;margin-top: -9%;}
+            .r2::before {height: 216px;margin-left: 386px;margin-top: -9%;}
+            .r3::before {height: 216px;margin-left: 305px;margin-top: -9%;}
+            .ast::before {margin-top: 20px;margin-left: 100px;}
+            .ast1::before {margin-top: 12px;margin-left: 245px;}
+            .ast2::before {margin-top: 9px;margin-left: 380px;}
+            .ast3::before {margin-top: 9px;margin-left: 298px;}
+            .ast4::before {margin-top: 5px;margin-left: 234px;font-size: x-large;}
+        }
+        @media (min-width: 992px) {
+            .container {margin-left: 12%;}
+            .r1::before {height: 125px;margin-left: 268px;margin-top: -9%;}
+            .r2::before {height: 170px;margin-left: 295px;margin-top: -45px;}
+            .r3::before {height: 173px;margin-left: 235px;margin-top: -46px;}
+            .ast::before {margin-top: 16px;margin-left: 76px;}
+            .ast1::before {margin-top: 7px;margin-left: 182px;}
+            .ast2::before {margin-top: 9px;margin-left: 285px;}
+            .ast3::before {margin-top: 8px;margin-left: 224px;}
+            .ast4::before {margin-top: 6px;margin-left: 175px;}
+        }

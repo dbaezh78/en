@@ -1,0 +1,12 @@
+﻿        @media (min-width: 384px) {
+                .container {margin-left: 0%;}
+                .sub1 {background-color: white;margin-top: -30px;}
+        }
+        @media (min-width: 768px) {
+                .container {margin-left: 0%;}
+                .sub1 {background-color: white;margin-top: -46px;}
+        }
+        @media (min-width: 992px) {
+                .container {margin-left: 12%;}
+                .sub1 {background-color: white;margin-top: -30px;}
+        }
